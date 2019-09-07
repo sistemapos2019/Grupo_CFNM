@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>partediseño</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/fonts/material-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-light navbar-expand-md sticky-top navigation-clean-button" style="height:80px;background-color:#737b82;color:#ffffff;">
+            <div class="container-fluid"><a class="navbar-brand" href="#"><i class="material-icons">restaurant</i>&nbsp;RestBar</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div
+                    class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item" role="presentation"><a class="nav-link" style="color:#ffffff;" href="#"><i class="typcn typcn-pencil"></i>&nbsp;Crear Orden</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" style="color:#ffffff;" href="#"><i class="fa fa-sign-in"></i>Iniciar Sesion&nbsp; &nbsp;&nbsp;</a></li>
+                    </ul>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#" style="color: #fff9f9;">Administrar&nbsp;</a>
+                        <div class="dropdown-menu bg-info" role="menu"><a class="dropdown-item" role="presentation" href="administrar_categorias.html">Categorias</a><a class="dropdown-item" role="presentation" href="#">Productos</a><a class="dropdown-item" role="presentation" href="administracion_parametros.html">Parametros</a>
+                            <a
+                                class="dropdown-item" role="presentation" href="#">Estadisticas</a><a class="dropdown-item" role="presentation" href="#">Cerrar Sesion</a></div>
+                    </li>
+            </div>
+    </div>
+    </nav>
+    </div>
+    <div>
+        <div style="margin: 16px;"><label>Nombre:</label><input type="text" style="margin: 0px 30px;"><label style="margin: 0px 20px;">Preparacion:</label></div>
+        <div style="margin: 16px;"><label>Precio:</label><input type="text" style="margin: 0px 45px;"><label style="margin: 0px 10px;">si:</label><input type="radio" id="prep" name="prep"><label style="margin: 0px 10px;">no:</label><input type="radio" id="prep" name="prep">
+            <button
+                class="btn btn-primary bg-success" type="button" style="margin: 0px 40px;">agregar producto</button>
+        </div>
+        <div style="margin: 16px;"><label>Categoria:</label><select style="width: 153px;height: 30px;margin: 0px 20px;"><option value="12">bebidas</option><option value="13" selected="">platos</option><option value="14">postres</option></select><button class="btn btn-primary bg-danger"
+                type="button" style="margin: 0px 196px;">eliminar producto</button></div>
+        <div class="table-responsive table-bordered" style="width: 787px;background-color: #f4f4f4;">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Categoria</th>
+                        <th>Preparacion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>
+</body>
+
+</html>

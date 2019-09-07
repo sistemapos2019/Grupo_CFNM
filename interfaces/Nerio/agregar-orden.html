@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>dark nabvar</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/material-icons.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-light navbar-expand-md sticky-top navigation-clean-button" style="height:80px;background-color:#37434d;color:#ffffff;">
+            <div class="container-fluid"><a class="navbar-brand" href="#"><i class="fa fa-globe"></i>&nbsp;RESBAR NUEVA ORDEN</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div
+                    class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item" role="presentation"></li>
+                        <li class="nav-item" role="presentation"></li>
+                        <li class="nav-item" role="presentation"></li>
+                    </ul><a class="ml-auto" style="color: #f4efef;" href="#"><i class="fa fa-sign-in"></i>&nbsp;INICIAR SESION &nbsp;</a>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#" style="color: rgb(242,246,251);">ADMINISTRAR</a>
+                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">Categoria</a><a class="dropdown-item" role="presentation" href="#">Productos</a><a class="dropdown-item" role="presentation" href="#">Parametros</a><a class="dropdown-item"
+                                role="presentation" href="#">Estadisticas</a><a class="dropdown-item" role="presentation" href="#">Mesas</a><a class="dropdown-item" role="presentation" href="#">Usuarios y Roles</a><a class="dropdown-item" role="presentation"
+                                href="#">Compras</a><a class="dropdown-item" role="presentation" href="#">Cerrar sesion</a></div>
+                    </li>
+            </div>
+    </div>
+    </nav>
+    </div><select id="1" class="form-control"  position="relative"><optgroup label="CATEGORIAS"><option value="12" selected>PLATILLOS</option><option value="13">BEBIDAS</option><option value="14">POSTRES</option></optgroup></select>
+    <div class="col-md-12 search-table-col">
+        <div class="form-group pull-right col-lg-4"><input type="text" class="search form-control" placeholder="buscar descripcion.." /></div><span class="counter pull-right"></span>
+        <div class="table-responsive table-bordered table table-hover table-bordered results">
+            <table class="table table-bordered table-hover">
+                <thead class="bill-header cs">
+                    <tr>
+                        <th id="trs-hd" class="col-lg-1">DESCRIPCION</th>
+                        <th id="trs-hd" class="col-lg-2" style="width: 100px;">agregar</th>
+                        <th id="trs-hd" class="col-lg-2">cantidad</th>
+                        <th id="trs-hd" class="col-lg-2">sub-total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="warning no-result">
+                        <td colspan="12"><i class="fa fa-warning"></i>&nbsp; No Result !!!</td>
+                    </tr>
+                    <tr>
+                        <td>PUPUSAS</td>
+                        <td><button class="btn btn-success" style="margin-left: 5px;" type="submit"><i class="fa fa-plus-square" style="font-size: 15px;"></i></button></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div><button class="btn btn-primary" type="button">agregar orden</button>
+<button type="button" class="btn btn-danger" onclick="location.href='dashboard.html'">cancelar orden </button>
+<button type="button" class="btn btn-warning" onclick="location.href='nueva-orden.html'">volver</button></div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
+</body>
+
+</html>

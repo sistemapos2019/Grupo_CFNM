@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>InterfacesKaren</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body>
+   <div>
+        <nav class="navbar navbar-light navbar-expand-md sticky-top navigation-clean-button" style="height:80px;background-color:#737b82;color:#ffffff;">
+            <div class="container-fluid"><a class="navbar-brand" href="#"><i class="material-icons">restaurant</i>&nbsp;RestBar</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div
+                    class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item" role="presentation"><a class="nav-link" style="color:#ffffff;" href="#"><i class="typcn typcn-pencil"></i>&nbsp;Crear Orden</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" style="color:#ffffff;" href="#"><i class="fa fa-sign-in"></i>Iniciar Sesion&nbsp; &nbsp;&nbsp;</a></li>
+                    </ul>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#" style="color: #fff9f9;">Administrar&nbsp;</a>
+                        <div class="dropdown-menu bg-info" role="menu"><a class="dropdown-item" role="presentation" href="administrar_categorias.html">Categorias</a><a class="dropdown-item" role="presentation" href="#">Productos</a><a class="dropdown-item" role="presentation" href="administracion_parametros.html">Parametros</a>
+                            <a
+                                class="dropdown-item" role="presentation" href="#">Estadisticas</a><a class="dropdown-item" role="presentation" href="#">Cerrar Sesion</a></div>
+                    </li>
+            </div>
+    </div>
+    </nav>
+    </div>
+    <form><div class="mover">
+    <label class="flex-column">Año</label> 
+    <select>
+        <option value"12" selected>2019</option>
+         <option value"13" >2018</option>
+         <option value"14" >2017</option>
+    </select>
+    
+    <label class="flex-column">Mes</label> 
+    <select>
+        <option value"15" selected>Enero</option>
+         <option value"16" >Febrero</option>
+         <option value"17" >Marzo</option>
+    </select>
+    
+    
+       
+</div>
+<div  class="container mt-4">
+<div class="card border-info">
+                <div class="card-header bg-info text-black">
+                    Venta Mensual
+                </div>
+    <div class="card-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Dia</th>
+                                <th>Documentos Emitidos Del No.</th>
+                                <th>Documentos Emitidos Al No.</th>
+                                <th>Ventas</th>
+                                <th>Propinas</th>
+                                <th>Total de Ventas Diarias</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <c:forEach var="dato" items="${listar}">
+                           
+                        </c:forEach>
+                        </tbody>
+                    </table>
+
+
+                </div>
+                
+            </div>
+        </div>                            </form>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
