@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Dashboard para llevar</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/material-icons.min.css">
+    <link rel="stylesheet" href="assets/fonts/typicons.min.css">
+     <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body>
+ <div>
+        <nav class="navbar navbar-light navbar-expand-md sticky-top navigation-clean-button" style="height:80px;background-color:#737b82;color:#ffffff;">
+            <div class="container-fluid"><a class="navbar-brand" href="#"><i class="material-icons">restaurant</i>&nbsp;RestBar</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div
+                    class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav ml-auto">
+                       
+                    </ul>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#" style="color: #fff9f9;">Administrar&nbsp;</a>
+                        <div class="dropdown-menu bg-info" role="menu"><a class="dropdown-item" role="presentation" href="/home/cuellar/Escritorio/entrega_diseño_interfaz/Carlos/administrar_categorias.html">Categorias</a><a class="dropdown-item" role="presentation" href="/home/cuellar/Escritorio/entrega_diseño_interfaz/William/administrarproductos.html">Productos</a><a class="dropdown-item" role="presentation" href="/home/cuellar/Escritorio/entrega_diseño_interfaz/Carlos/administracion_parametros.html">Parametros</a>
+                            <a
+                                class="dropdown-item" role="presentation" data-toggle="modal" data-target="#modal1">Estadisticas</a><a class="dropdown-item" role="presentation" href="/home/cuellar/Escritorio/entrega_diseño_interfaz/William/administrarmesas.html">Mesas</a><a class="dropdown-item" role="presentation" href="/home/cuellar/Escritorio/entrega_diseño_interfaz/William/administrarusuarios.html">Usuarios Y roles</a>
+                                <a
+                                class="dropdown-item" role="presentation" href="/home/cuellar/Escritorio/entrega_diseño_interfaz/Carlos/index.html">Bitacora</a>
+                                <a class="dropdown-item" role="presentation" href="/home/cuellar/Escritorio/entrega_diseño_interfaz/Carlos/administrar_compras.html">Compras</a><a class="dropdown-item" role="presentation" href="#">Cerrar Sesion</a></div>
+                    </li>
+            </div>
+    </div>
+    </nav>
+    </div>
+<br>
+    <div class="col-md-12 search-table-col">
+        <div class="form-group pull-right col-lg-4"><input type="text" class="search form-control" placeholder="buscar "></div><span class="counter pull-right"></span>
+        
+       
+    <div><button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
+  Nueva Orden
+</button>
+        <div class="modal fade" id="exampleModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel" text-align: center>Inicio De sesion</h5><button type="button" class="close" data-dismiss="modal"><span>×</span></button></div>
+                    <div class="modal-body">
+                        <h8>Ingrese su usuario y password </h8><br>
+                        <h8> asignado por favor</h8>
+
+                    </div>
+                    <div class="modal-body">
+                    <input type="text" class="form-control" placeholder="usuario" />
+                    
+                    </div>
+                    <div class="modal-body"><input type="text" class="form-control" placeholder="Password" /></div>
+                    <div class="modal-footer">
+                       
+                                   
+                        
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button><a href="nuevaOrden.html" class="btn btn-primary">iniciar</a></div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        <div class="table-responsive table-bordered table table-hover table-bordered results">
+            <table class="table table-bordered table-hover">
+                <thead class="bill-header cs">
+                    <tr>
+                        <th id="trs-hd"  >IdOrden</th>
+                        <th id="trs-hd"  >Mesero</th>
+                        <th id="trs-hd" >CLiente</th>
+                        <th id="trs-hd"  >Total</th>
+                        <th id="trs-hd"  >Estado</th>
+                        <th id="trs-hd"  >TiempoPreparado</th>
+                        <th id="trs-hd" >Preparado</th>
+                        <th id="trs-hd" >acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr class="warning no-result">
+                        <td colspan="12"><i class="fa fa-warning"></i>&nbsp; No Result !!!</td>
+                    </tr>
+                    <tr>
+                        <td>03</td>
+                        <td>pacun</td>
+                        <td>holliwood</td>
+                        <td>$3.50</td>
+                        <td>Activo</td>
+                        <td><button class="btn btn-outline-success" style="  margin-left: 5px;
+" type="submit"><i style="  font-size: 15px;
+">30 min</i></button></td>
+                        <td>Si</td>
+                        <td>
+                        <button onclick="location.href=' /home/cuellar/Escritorio/entrega_diseño_interfaz/William/pcobrarorden.html'" class="btn btn-outline-success" style="margin-left: 5px;" type="submit"><i class="fa fa-money" style="font-size: 15px;"></i></button>
+                        <button onclick="location.href=' /home/cuellar/Escritorio/entrega_diseño_interfaz/William/ticket.html'" class="btn btn-outline-success" style="margin-left: 5px;" type="submit"><i class="fa fa-print" style="font-size: 15px;"></i></button>
+                        <button onclick="location.href=' /home/cuellar/Escritorio/entrega_diseño_interfaz/Nerio/modificar-orden.html'" class="btn btn-outline-danger" style="margin-left: 5px;" type="submit"><i class="fa fa-undo" style="font-size: 15px;"></i></button>
+                        <button onclick="location.href=' /home/cuellar/Escritorio/entrega_diseño_interfaz/Nerio/agregar-productos-a-orden.html'" class="btn btn-outline-danger" style="margin-left: 5px;" type="submit"><i class="fa fa-plus" style="font-size: 15px;"></i></button>
+                            
+                            
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modal1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Estadistica</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body">
+                    </div><div class="container mt-4"> 
+ <div class="card border-info">
+<div class="card-header bg-info text-black"  > Seleccione Tipo De Estadistica</div>
+     <br>
+    <a class="btn btn-outline-success" href="/home/cuellar/Escritorio/entrega_diseño_interfaz/Carlos/estadistica_venta_diaria.html">Venta Diaria</a>
+     <br>
+      <a class="btn btn-outline-success" href="/home/cuellar/Escritorio/entrega_diseño_interfaz/Karen/VentaSemanal.html" >Venta Semanal</a>
+     <br>
+      <a class="btn btn-outline-success" href="/home/cuellar/Escritorio/entrega_diseño_interfaz/Karen/ventasMensuales.html" >Venta Mensual</a>
+      <br>  
+      <br>
+      <br>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

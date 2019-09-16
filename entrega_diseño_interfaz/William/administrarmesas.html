@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Administrar Mesas</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/fonts/material-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-light navbar-expand-md sticky-top navigation-clean-button" style="height:80px;background-color:#737b82;color:#ffffff;">
+            <div class="container-fluid"><a class="navbar-brand" href="/home/cuellar/Escritorio/entrega_diseño_interfaz/Nerio/dashboard.html"><i class="material-icons">restaurant</i>&nbsp;RestBar</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div
+                    class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav ml-auto">
+                        
+                    </ul>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#" style="color: #fff9f9;">Administrar&nbsp;</a>
+                        <div class="dropdown-menu bg-info" role="menu"><a class="dropdown-item" role="presentation" href="/home/cuellar/Escritorio/entrega_diseño_interfaz/Carlos/administrar_categorias.html">Categorias</a><a class="dropdown-item" role="presentation" href="/home/cuellar/Escritorio/entrega_diseño_interfaz/William/administrarproductos.html">Productos</a><a class="dropdown-item" role="presentation" href="/home/cuellar/Escritorio/entrega_diseño_interfaz/Carlos/administracion_parametros.html">Parametros</a>
+                            <a
+                                class="dropdown-item" role="presentation" data-toggle="modal" data-target="#modal1">Estadisticas</a><a class="dropdown-item" role="presentation" href="/home/cuellar/Escritorio/entrega_diseño_interfaz/William/administrarmesas.html">Mesas</a><a class="dropdown-item" role="presentation" href="/home/cuellar/Escritorio/entrega_diseño_interfaz/William/administrarusuarios.html">Usuarios Y roles</a>
+                                <a
+                                class="dropdown-item" role="presentation" href="/home/cuellar/Escritorio/entrega_diseño_interfaz/Carlos/index.html">Bitacora</a>
+                                <a class="dropdown-item" role="presentation" href="/home/cuellar/Escritorio/entrega_diseño_interfaz/Carlos/administrar_compras.html">Compras</a><a class="dropdown-item" role="presentation" href="#">Cerrar Sesion</a></div>
+                    </li>
+            </div>
+    </div>
+    </nav>
+    </div>
+    <div class="container mt-4 " style="width: 100%;height: 300px;margin: 0px;padding: 3px;">
+	<div class="card border-info">
+	<div class="card-header bg-info text-black">
+                    Administrar mesas
+                </div>
+        <div style="margin: 18px;width: 268px;"><label>ID:&nbsp;</label><input style="margin-left: 25px;" type="text"></div>
+        <div style="width: 259px;height: 19px;margin: 22px;"><label>mesa:&nbsp;</label><input type="text"></div>
+        <div style="padding: 0px 35px;margin: 20px;width: 255px;height: 64px;"><button class="btn btn-primary bg-success" type="button" style="padding: 1px;margin: 14px;height: 38px;width: 67px;">agregar</button><button class="btn btn-primary bg-danger" type="button">quitar</button></div>
+        <div class="table-responsive table-bordered"
+            style="margin: 0px 0px 30px;width: 100%;background-color: #f5f4f4;">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>mesa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>3</td>
+                        <td>tres</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>cuatro</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+	</div>
+	<div class="modal fade" role="dialog" tabindex="-1" id="modal1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Estadistica</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body">
+                    </div><div class="container mt-4"> 
+ <div class="card border-info">
+<div class="card-header bg-info text-black"  > Seleccione Tipo De Estadistica</div>
+     <br>
+    <a class="btn btn-outline-success" href="/home/cuellar/Escritorio/entrega_diseño_interfaz/Carlos/estadistica_venta_diaria.html">Venta Diaria</a>
+     <br>
+      <a class="btn btn-outline-success" href="/home/cuellar/Escritorio/entrega_diseño_interfaz/Karen/VentaSemanal.html" >Venta Semanal</a>
+     <br>
+      <a class="btn btn-outline-success" href="/home/cuellar/Escritorio/entrega_diseño_interfaz/Karen/ventasMensuales.html" >Venta Mensual</a>
+      <br>  
+      <br>
+      <br>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>
+</body>
+
+</html>
