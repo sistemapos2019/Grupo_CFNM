@@ -7,9 +7,9 @@ Flores Quintanilla Karen Idalia
 Martinez Matamoros, William Otoniel
 Nerio Hernandez Daniel Ernesto
 
-# Fecha del 27/Sep/2019#
-+ Categorias
-+ Productos
+# Fecha del 27/Sep/2019
+- Categorias
+- Productos
 - parametros
 - Inicio de sesion y que se adapte al parametro
 - pantalla de los bitacoras 
