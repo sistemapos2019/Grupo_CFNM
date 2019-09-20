@@ -15,4 +15,4 @@ Nerio Hernandez Daniel Ernesto
 - pantalla de los bitacoras 
 - admin usuarios
 - mesas
-### para cada accion que guarde la bitacora y que pida loggin de acuerdo al parametro en la base de datos
+##### para cada accion que guarde la bitacora y que pida loggin de acuerdo al parametro en la base de datos
