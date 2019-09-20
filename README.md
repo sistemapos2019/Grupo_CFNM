@@ -7,7 +7,7 @@ Flores Quintanilla Karen Idalia
 Martinez Matamoros, William Otoniel
 Nerio Hernandez Daniel Ernesto
 
-###Fecha del 27/Sep/2019
+Fecha del 27/Sep/2019
 -Categorias
 -Productos
 -parametros
