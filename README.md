@@ -1,11 +1,11 @@
 # Grupo_CFNM
 Entregas  del sistema para la materia diseño de sistemas 2 uesfmocc-2019 
 
-Integrantes:
-Cuellar Rodriguez Carlos Mauricio
-Flores Quintanilla Karen Idalia
-Martinez Matamoros, William Otoniel
-Nerio Hernandez Daniel Ernesto
+### Integrantes:
+- Cuellar Rodriguez Carlos Mauricio
+- Flores Quintanilla Karen Idalia
+- Martinez Matamoros, William Otoniel
+- Nerio Hernandez Daniel Ernesto
 
 # Fecha del 27/Sep/2019
 - Categorias
