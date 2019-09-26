@@ -40,13 +40,13 @@
 
 
 
-        <div class="container mt-5">
+        <div class="container mt-5" id="contarcategoria">
             <div class="card border-info">
                 <div class="card-header bg-info text-black-50">
                     Nueva Categoria
                 </div>
                 <div class="card-body">
-                    <div class="group"><input type="text" required /><span class="highlight"></span><span class="bar"></span><label>IdCategoria</label></div>
+                    <div class="group"><input type="text" disabled /><span class="highlight"></span><span class="bar"></span><label>{{categoria.count}}</label></div>
                     <div class="group"><input type="text" required /><span class="highlight"></span><span class="bar"></span><label>Nombre Categoria</label></div>
                     <button class="btn btn-primary" type="button">
                         <i class="fa fa-save"></i>
@@ -88,6 +88,9 @@
             <script src="assets/js/jquery.min.js"></script>
             <script src="assets/bootstrap/js/bootstrap.min.js"></script>
             <script src="assets/js/script.min.js"></script>
+            <script src="./../vue/vue.js"></script>
+            <script src="./../axios/axios.min.js"></script>
+            <script src="./../archivos_vue/contar_categorias.js"></script>
 </body>
 
 </html>
