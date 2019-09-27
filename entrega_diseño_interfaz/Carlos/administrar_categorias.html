@@ -94,7 +94,7 @@
 
                 </div>
 
-                <pre>{{ $data }}</pre>
+                <!-- <pre>{{ $data }}</pre> -->
             </div>
         </div>
         <div class="modal fade" role="dialog" tabindex="-1" id="modal1">
@@ -135,10 +135,10 @@
                         <div class="container mt-5">
                             <div class="card border-info">
                                 <div class="card-header bg-info text-black-50">
-                                    Modificar Categoria
+                                    Nueva Categoria
                                 </div>
                                 <div class="card-body">
-                                    <div class="group"><input v-model="id" type="numb" required /><span class="highlight"></span><span class="bar"></span><label>IdCategoria</label></div>
+                                    <div class="group"><input type="numb" disabled /><span class="highlight"></span><span class="bar"></span><label>{{traerultimacategoria()}}</label></div>
                                     <div class="group"><input v-model="nombre" type="text" required /><span class="highlight"></span><span class="bar"></span><label>Nombre Categoria</label></div>
                                 </div>
                             </div>

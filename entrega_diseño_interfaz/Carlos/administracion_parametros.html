@@ -14,93 +14,124 @@
 </head>
 
 <body>
-    <div>
-        <nav class="navbar navbar-light navbar-expand-md sticky-top navigation-clean-button" style="height:80px;background-color:#737b82;color:#ffffff;">
-            <div class="container-fluid"><a class="navbar-brand" href="./../Nerio/dashboard.html"><i
+    <div id="app" class="container">
+        <div>
+            <nav class="navbar navbar-light navbar-expand-md sticky-top navigation-clean-button" style="height:80px;background-color:#737b82;color:#ffffff;">
+                <div class="container-fluid"><a class="navbar-brand" href="./../Nerio/dashboard.html"><i
                         class="material-icons">restaurant</i>&nbsp;RestBar</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span
                         class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navcol-1">
-                    <ul class="nav navbar-nav ml-auto">
+                    <div class="collapse navbar-collapse" id="navcol-1">
+                        <ul class="nav navbar-nav ml-auto">
 
-                    </ul>
-                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#" style="color: #fff9f9;">Administrar&nbsp;</a>
-                        <div class="dropdown-menu bg-info" role="menu"><a class="dropdown-item" role="presentation" href="./../Carlos/administrar_categorias.html">Categorias</a><a class="dropdown-item" role="presentation" href="./../William/administrarproductos.html">Productos</a>
-                            <a class="dropdown-item" role="presentation" href="./../administracion_parametros.html">Parametros</a>
-                            <a class="dropdown-item" role="presentation" data-toggle="modal" data-target="#modal1">Estadisticas</a><a class="dropdown-item" role="presentation" href="./../William/administrarmesas.html">Mesas</a>
-                            <a class="dropdown-item" role="presentation" href="./../William/administrarusuarios.html">Usuarios Y roles</a>
-                            <a class="dropdown-item" role="presentation" href="./../Carlos/index.html">Bitacora</a>
-                            <a class="dropdown-item" role="presentation" href="./../Carlos/administrar_compras.html">Compras</a><a class="dropdown-item" role="presentation" href="#">Cerrar Sesion</a></div>
-                    </li>
-                </div>
-            </div>
-        </nav>
-    </div>
-    <div class="container mt-4 ">
-        <div class="card border-info">
-            <div class="card-header bg-info text-black">
-                Administrar Parametros
-            </div>
-            <div class="card-body ">
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>IdParametro</th>
-                            <th>Nombre Parametro</th>
-                            <th>Valor Parametro</th>
-                            <th>Acciones</th>
-
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>
-                                <a href="modificar_parametros.html" class="btn btn-outline-success" style="margin-left: 5px;" type="submit"><i class="fa fa-check"
-                                        style="font-size: 15px;"></i></a>
-
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-
-            </div>
-
-        </div>
-    </div>
-    <div class="modal fade" role="dialog" tabindex="-1" id="modal1">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Estadistica</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                </div>
-                <div class="modal-body">
-                </div>
-                <div class="container mt-4">
-                    <div class="card border-info">
-                        <div class="card-header bg-info text-black"> Seleccione Tipo De Estadistica</div>
-                        <br>
-                        <a class="btn btn-outline-success" href="./../Carlos/estadistica_venta_diaria.html">Venta
-                            Diaria</a>
-                        <br>
-                        <a class="btn btn-outline-success" href="./../Karen/VentaSemanal.html">Venta
-                            Semanal</a>
-                        <br>
-                        <a class="btn btn-outline-success" href="./../Karen/ventasMensuales.html">Venta
-                            Mensual</a>
-                        <br>
-                        <br>
-                        <br>
+                        </ul>
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#" style="color: #fff9f9;">Administrar&nbsp;</a>
+                            <div class="dropdown-menu bg-info" role="menu"><a class="dropdown-item" role="presentation" href="./../Carlos/administrar_categorias.html">Categorias</a><a class="dropdown-item" role="presentation" href="./../William/administrarproductos.html">Productos</a>
+                                <a class="dropdown-item" role="presentation" href="./../administracion_parametros.html">Parametros</a>
+                                <a class="dropdown-item" role="presentation" data-toggle="modal" data-target="#modal1">Estadisticas</a><a class="dropdown-item" role="presentation" href="./../William/administrarmesas.html">Mesas</a>
+                                <a class="dropdown-item" role="presentation" href="./../William/administrarusuarios.html">Usuarios Y roles</a>
+                                <a class="dropdown-item" role="presentation" href="./../Carlos/index.html">Bitacora</a>
+                                <a class="dropdown-item" role="presentation" href="./../Carlos/administrar_compras.html">Compras</a><a class="dropdown-item" role="presentation" href="#">Cerrar Sesion</a></div>
+                        </li>
                     </div>
+                </div>
+            </nav>
+        </div>
+        <div class="container mt-4 ">
+            <div class="card border-info">
+                <div class="card-header bg-info text-black">
+                    Administrar Parametros
+                </div>
+                <div class="card-body ">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>IdParametro</th>
+                                <th>Nombre Parametro</th>
+                                <th>Valor Parametro</th>
+                                <th>Acciones</th>
 
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr v-for="(parametro,index) in parametros">
+                                <td>{{parametro.id}}</td>
+                                <td>
+                                    <span v-if="formActualizar && idactualizar == index">
+                                                <!-- Formulario para actualizar -->
+                                                <input v-model="nombreactualizar" type="text" class="form-control">
+                                            </span>
+                                    <span v-else>
+                                                <!-- Dato nombre -->
+                                                {{ parametro.nombre }}
+                                            </span>
+                                </td>
+                                <td>
+                                    <span v-if="formActualizar && idactualizar == index">
+                                                    <!-- Formulario para actualizar -->
+                                                    <input v-model="valoractualizar" type="text" class="form-control">
+                                                </span>
+                                    <span v-else>
+                                                    <!-- Dato nombre -->
+                                                    {{ parametro.valor }}
+                                                </span>
+                                </td>
+                                <td>
+                                    <!-- Botón para guardar la información actualizada -->
+                                    <span v-if="formActualizar && idactualizar == index">
+                                                        <button v-on:click="guardarActualizacion(index+1)" class="btn btn-success">Guardar</button>
+                                                    </span>
+                                    <span v-else>
+                                                        <!-- Botón para mostrar el formulario de actualizar -->
+                                                        <button  v-on:click="verFormActualizar(index)" class="btn btn-warning">Actualizar</button>
+                                                        <!-- Botón para borrar -->
+                                                       
+                                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="modal fade" role="dialog" tabindex="-1" id="modal1">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Estadistica</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    </div>
+                    <div class="modal-body">
+                    </div>
+                    <div class="container mt-4">
+                        <div class="card border-info">
+                            <div class="card-header bg-info text-black"> Seleccione Tipo De Estadistica</div>
+                            <br>
+                            <a class="btn btn-outline-success" href="./../Carlos/estadistica_venta_diaria.html">Venta
+                            Diaria</a>
+                            <br>
+                            <a class="btn btn-outline-success" href="./../Karen/VentaSemanal.html">Venta
+                            Semanal</a>
+                            <br>
+                            <a class="btn btn-outline-success" href="./../Karen/ventasMensuales.html">Venta
+                            Mensual</a>
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-        <script src="assets/js/script.min.js"></script>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
+    <script src="./../vue/vue.js"></script>
+    <script src="./../axios/axios.min.js"></script>
+    <script src="./../archivos_vue/parametros.js"></script>
 </body>
 
 </html>
