@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
             idactualizar: -1,
             // Input nombre dentro del formulario de actualizar
             nombreactualizar: null,
+            categoriaseleccionada: 0,
         },
 
         mounted() {
@@ -25,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
 
         methods: {
-            cargarCategorias() {
+            cargarCategorias: function() {
                 axios
                     .get('http://localhost:3000/api/Categoria')
                     .then((respuesta) => {
@@ -34,18 +35,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
             },
-            crearCategoria() {
 
-                axios({
-                    method: 'post',
-                    url: 'http://localhost:3000/api/Categoria',
-                    data: {
-                        id: this.traerultimacategoria(),
-                        nombre: this.nombre
-                    }
-                });
-                //this.id = null;
-                this.nombre = null;
+            crearCategoria() {
+                if (this.nombre == null) {
+                    alert("Fallo agregar categoria faltan datos");
+                } else {
+                    axios({
+                        method: 'post',
+                        url: 'http://localhost:3000/api/Categoria',
+                        data: {
+                            id: this.traerultimacategoria(),
+                            nombre: this.nombre
+                        }
+                    });
+                    //this.id = null;
+                    this.nombre = null;
+                    alert("Categoria agregada con exito");
+
+                }
+
             },
 
             verFormActualizar: function(categoria_id) {
@@ -58,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             guardarActualizacion: function(categoria_id) {
                 if (this.nombreactualizar == "") {
-                    alert("NO guardado faltan campos requeridos")
+                    alert("NO guardado faltan campos requeridos");
                 } else {
                     // Ocultamos nuestro formulario de actualizar
                     this.formActualizar = false;
@@ -75,29 +83,37 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     //actualizando los datos en la pagina
 
-                    alert("guardado con exito")
+                    alert("guardado con exito");
 
                 }
 
             },
             traerultimacategoria() {
-                var valor = 1;
-                for (var i = 1; i < this.categorias.length; i++) {
-                    valor = valor + 1
-                }
-                return valor + 1;
-
+                //falta ver como traer el id actual en la base de datos 
+                // axios({
+                //   method: 'post',
+                //url: 'http://localhost:3000/api/Categoria',
+                // data: {
+                //   id: this.traerultimacategoria(),
+                // nombre: this.nombre
+                //}
+                //});
+                return 6;
 
             },
 
-            borrarCategoria: function(categoria_id) {
+            borrarCategoria: function() {
                 // Borramos de la lista
+                // var categoria_id = this.categoriaseleccionada;
+
                 axios({
                     method: 'delete',
-                    url: ('http://localhost:3000/api/Categoria/' + categoria_id)
+                    url: ('http://localhost:3000/api/Categoria/' + this.categoriaseleccionada)
                 });
+                alert("Se borro con exito la categoria");
             }
-        }
+
+        },
 
     })
 });

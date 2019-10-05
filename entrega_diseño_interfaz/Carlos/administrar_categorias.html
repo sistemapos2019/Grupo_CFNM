@@ -5,7 +5,7 @@
     <link rel="shortcut icon" href="../phpThumb_generated_thumbnailico.ico">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--<META HTTP-EQUIV="REFRESH" CONTENT="5;URL=./../Carlos/administrar_categorias.html">-->
     <title>Administracion Categorias</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
@@ -58,7 +58,7 @@
 
                             <tbody>
 
-                                <tr v-for="(catego,index) in categorias">
+                                <tr v-for="(catego,index) in categorias" v-on:click="categoriaseleccionada=catego.id;">
                                     <td>{{catego.id}}</td>
                                     <td>
                                         <span v-if="formActualizar && idactualizar == index">
@@ -73,13 +73,13 @@
                                     <td>
                                         <!-- Botón para guardar la información actualizada -->
                                         <span v-if="formActualizar && idactualizar == index">
-                                                <button v-on:click="guardarActualizacion(index+1)" class="btn btn-success">Guardar</button>
+                                                <button v-on:click="guardarActualizacion(index+1);location.reload();" class="btn btn-success">Guardar</button>
                                             </span>
                                         <span v-else>
                                                 <!-- Botón para mostrar el formulario de actualizar -->
                                                 <button  v-on:click="verFormActualizar(index)" class="btn btn-warning">Actualizar</button>
                                                 <!-- Botón para borrar -->
-                                                <button v-on:click="borrarCategoria(index+1)" class="btn btn-danger">Borrar</button>
+                                                <button data-toggle="modal" data-target="#modal3" class="btn btn-danger">Borrar</button>
                                             </span>
                                     </td>
                                 </tr>
@@ -94,7 +94,7 @@
 
                 </div>
 
-                <!-- <pre>{{ $data }}</pre> -->
+                <pre>{{ $data.categoriaseleccionada }}</pre>
             </div>
         </div>
         <div class="modal fade" role="dialog" tabindex="-1" id="modal1">
@@ -138,13 +138,25 @@
                                     Nueva Categoria
                                 </div>
                                 <div class="card-body">
-                                    <div class="group"><input type="numb" disabled /><span class="highlight"></span><span class="bar"></span><label>{{traerultimacategoria()}}</label></div>
+                                    <!-- <div class="group"><input type="numb" disabled /><span class="highlight"></span><span class="bar"></span><label>{{traerultimacategoria()}}</label></div> -->
                                     <div class="group"><input v-model="nombre" type="text" required /><span class="highlight"></span><span class="bar"></span><label>Nombre Categoria</label></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Cancelar</button><button class="btn btn-primary" type="button" v-on:click="crearCategoria" data-dismiss="modal">Guardar</button></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" role="dialog" tabindex="-1" id="modal3">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Confirmar Eliminar Categoria</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                    <div class="modal-body" id="">
+                        <p>Esta Seguro que desea eliminar esta Categoria</p>
+                    </div>
+                    <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Cancelar</button><button class="btn btn-primary" type="button" v-on:click.prevent="borrarCategoria()" data-dismiss="modal">Aceptar</button></div>
                 </div>
             </div>
         </div>
@@ -156,6 +168,7 @@
     <script src="./../vue/vue.js"></script>
     <script src="./../axios/axios.min.js"></script>
     <script src="./../archivos_vue/obtener_categorias.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.3.5"></script>
 </body>
 
 </html>
