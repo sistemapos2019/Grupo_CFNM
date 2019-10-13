@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         method: 'post',
                         url: 'http://localhost:3000/api/Categoria',
                         data: {
-                            id: this.traerultimacategoria(),
+                            id:"",
                             nombre: this.nombre
                         }
                     });
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 this.formActualizar = true;
             },
 
-            guardarActualizacion: function(categoria_id) {
+            guardarActualizacion: function() {
                 if (this.nombreactualizar == "") {
                     alert("NO guardado faltan campos requeridos");
                 } else {
@@ -73,9 +73,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     // Actualizamos los datos en la base de datos
                     axios({
                         method: 'put',
-                        url: ('http://localhost:3000/api/Categoria/' + categoria_id),
+                        url: ('http://localhost:3000/api/Categoria/' + this.categoriaseleccionada),
                         data: {
-                            id: categoria_id,
+                            id: this.categoriaseleccionada,
                             nombre: this.nombreactualizar
                         }
                     });
