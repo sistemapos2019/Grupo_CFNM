@@ -2,178 +2,133 @@
 <html>
 
 <head>
-    <link rel="shortcut icon" href="../phpThumb_generated_thumbnailico.ico">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Agregar Orden</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/fonts/material-icons.min.css">
-    <link rel="stylesheet" href="assets/fonts/typicons.min.css">
-    <link rel="stylesheet" href="assets/css/styles.min.css">
 </head>
 
-<body>
-    <div>
+<body><div>
         <nav class="navbar navbar-light navbar-expand-md sticky-top navigation-clean-button" style="height:80px;background-color:#737b82;color:#ffffff;">
-            <div class="container-fluid"><a class="navbar-brand" href="./../Nerio/dashboard.html"><i
-                        class="material-icons">restaurant</i>&nbsp;RestBar</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span
-                        class="navbar-toggler-icon"></span></button>
+            <div class="container-fluid"><a class="navbar-brand" href="dashboard.html"><i class="material-icons">restaurant</i>&nbsp;RestBar</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="nav navbar-nav ml-auto">
-
+                        
+                        <li class="nav-item" role="presentation"><a class="nav-link" style="color:#ffffff;" href="#"><i class="fa fa-sign-in"></i>Iniciar Sesion&nbsp; &nbsp;&nbsp;</a></li>
                     </ul>
                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#" style="color: #fff9f9;">Administrar&nbsp;</a>
-                        <div class="dropdown-menu bg-info" role="menu"><a class="dropdown-item" role="presentation" href="./../Carlos/administrar_categorias.html">Categorias</a><a class="dropdown-item" role="presentation" href="./../William/administrarproductos.html">Productos</a>
-                            <a class="dropdown-item" role="presentation" href="./../Carlos/administracion_parametros.html">Parametros</a>
-                            <a class="dropdown-item" role="presentation" data-toggle="modal" data-target="#modal1">Estadisticas</a><a class="dropdown-item" role="presentation" href="./../William/administrarmesas.html">Mesas</a>
-                            <a class="dropdown-item" role="presentation" href="./../William/administrarusuarios.html">Usuarios Y roles</a>
-                            <a class="dropdown-item" role="presentation" href="./../Carlos/index.html">Bitacora</a>
-                            <a class="dropdown-item" role="presentation" href="./../Carlos/administrar_compras.html">Compras</a><a class="dropdown-item" role="presentation" href="#">Cerrar Sesion</a></div>
+                        <div class="dropdown-menu bg-info" role="menu"><a class="dropdown-item" role="presentation" href="/home/cuellar/Escritorio/entrega_diseño_interfaz/Carlos/administrar_categorias.html">Categorias</a><a class="dropdown-item" role="presentation" href="/home/cuellar/Escritorio/entrega_diseño_interfaz/William/administrarproductos.html">Productos</a><a class="dropdown-item" role="presentation" href="/home/cuellar/Escritorio/entrega_diseño_interfaz/Carlos/administracion_parametros.html">Parametros</a>
+                            <a class="dropdown-item" role="presentation" href="/home/cuellar/Escritorio/entrega_diseño_interfaz/estadisticas/index.html">Estadisticas</a><a class="dropdown-item" role="presentation" href="/home/cuellar/Escritorio/entrega_diseño_interfaz/William/administrarmesas.html">Mesas</a><a class="dropdown-item" role="presentation" href="/home/cuellar/Escritorio/entrega_diseño_interfaz/William/administrarusuarios.html">Usuarios Y roles</a><a class="dropdown-item" role="presentation" href="/home/cuellar/Escritorio/entrega_diseño_interfaz/Carlos/administrar_compras.html">Compras</a><a class="dropdown-item" role="presentation" href="#">Cerrar Sesion</a></div>
                     </li>
-                </div>
             </div>
-        </nav>
+    </div>
+    </nav>
     </div>
     <br>
     <div class="col-md-12 search-table-col">
-
-        <div class="col-md-12 search-table-col">
-
-            <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
-                Clik Para Orden
-            </button>
-            <div class="modal fade" id="exampleModal" tabindex="-1">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel" text-align: center>Bienvenid@ a su Nueva orden
-                            </h5><button type="button" class="close" data-dismiss="modal"><span>×</span></button>
-                        </div>
-                        <div class="modal-body">
-                            <!-- Group of default radios - option 1 -->
-                            <div class="custom-control custom-radio">
-                                <input type="radio" class="custom-control-input" id="defaultGroupExample1" name="groupOfDefaultRadios">
-                                <label class="custom-control-label" for="defaultGroupExample1">Comer Aqui</label>
-                            </div>
-
-                            <!-- Group of default radios - option 2 -->
-                            <div class="custom-control custom-radio">
-                                <input type="radio" class="custom-control-input" id="defaultGroupExample2" name="groupOfDefaultRadios" checked>
-                                <label class="custom-control-label" for="defaultGroupExample2">Para Llevar</label>
-                            </div>
-
-                            <!-- Group of default radios - option 3 -->
-                            <div class="custom-control custom-radio">
-
-                            </div>
-
-                            <select name="select" selected="">
-                                <option value="value1">Mesa</option>
-                                <option value="value2">Mesa 1</option>
-                                <option value="value3">Mesa 2</option>
-                                <option value="value3">Mesa 3</option>
-                                <option value="value3">Mesa 4</option>
-                                <option value="value3">Mesa 5</option>
-                            </select>
-
-                            <br><br>
-                            <input class="" type="text" placeholder="mesero "> <br><br>
-                            <input class="" type="text" placeholder="cliente"><br><br>
-                            <textarea class="form-control" rows="4">observaciones</textarea>
-
-
-
-
-
-
-
-                            <br>
-                            <button type="button" class="btn btn-success" data-dismiss="modal">ok</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <a class="btn btn-outline-primary">Platillos</a>
-            <a class="btn btn-outline-primary">Bebidas</a>
-            <a class="btn btn-outline-primary">Postres</a>
-            <div class="form-group pull-right col-lg-4"><input type="text" class="search form-control" placeholder="buscar descripcion.."></div><span class="counter pull-right"></span>
-            <div class="table-responsive table-bordered table table-hover table-bordered results">
-                <table class="table table-bordered table-hover">
-                    <thead class="bill-header cs">
-                        <tr>
-                            <th id="trs-hd">IdOrden</th>
-                            <th id="trs-hd">IdMesa</th>
-                            <th id="trs-hd">Descripcion</th>
-                            <th id="trs-hd">Llevar</th>
-                            <th id="trs-hd">agregar</th>
-                            <th id="trs-hd">cantidad</th>
-                            <th id="trs-hd">precio Unitario</th>
-                            <th id="trs-hd">total</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="warning no-result">
-
-                        </tr>
-                        <tr>
-                            <td>01</td>
-                            <td>05</td>
-                            <td>Pupusas</td>
-                            <td>No</td>
-                            <td><button class="btn btn-outline-success" style="margin-left: 5px;" type="submit"><i
-                                        class="fa fa-plus-square" style="font-size: 15px;"></i></button>
-                                <button class="btn btn-outline-danger" style="margin-left: 5px;" type="submit"><i
-                                        class="fa fa-minus-square" style="font-size: 15px;"></i></button>
-                            </td>
-
-                            <td>1</td>
-                            <td>$1.00</td>
-                            <td>$1.00</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div><button class="btn btn-outline-primary" type="button">agregar orden</button>
-            <button type="button" class="btn btn-outline-danger" onclick="location.href='dashboard.html'">cancelar orden
-            </button>
-        </div>
-
-        <div class="modal fade" role="dialog" tabindex="-1" id="modal1">
-            <div class="modal-dialog" role="document">
+    
+    <div class="col-md-12 search-table-col">
+        
+        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
+  Clik Para Orden
+</button>
+        <div class="modal fade" id="exampleModal" tabindex="-1">
+            <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title">Estadistica</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                    </div>
+                        <h5 class="modal-title" id="exampleModalLabel" text-align: center>Bienvenid@ a su Nueva orden</h5><button type="button" class="close" data-dismiss="modal"><span>×</span></button></div>
                     <div class="modal-body">
-                    </div>
-                    <div class="container mt-4">
-                        <div class="card border-info">
-                            <div class="card-header bg-info text-black"> Seleccione Tipo De Estadistica</div>
-                            <br>
-                            <a class="btn btn-outline-success" href="./../Carlos/estadistica_venta_diaria.html">Venta
-                                Diaria</a>
-                            <br>
-                            <a class="btn btn-outline-success" href="./../Karen/VentaSemanal.html">Venta
-                                Semanal</a>
-                            <br>
-                            <a class="btn btn-outline-success" href="./../Karen/ventasMensuales.html">Venta
-                                Mensual</a>
-                            <br>
-                            <br>
-                            <br>
-                        </div>
+                        <!-- Group of default radios - option 1 -->
+<div class="custom-control custom-radio">
+  <input type="radio" class="custom-control-input" id="defaultGroupExample1" name="groupOfDefaultRadios">
+  <label class="custom-control-label" for="defaultGroupExample1">Comer Aqui</label>
+</div>
 
-                    </div>
+<!-- Group of default radios - option 2 -->
+<div class="custom-control custom-radio">
+  <input type="radio" class="custom-control-input" id="defaultGroupExample2" name="groupOfDefaultRadios" checked>
+  <label class="custom-control-label" for="defaultGroupExample2">Para Llevar</label>
+</div>
+
+<!-- Group of default radios - option 3 -->
+<div class="custom-control custom-radio">
+  
+</div>
+                        
+                        <select name="select" selected="">
+  <option value="value1">Mesa</option> 
+  <option value="value2">Mesa 1</option>
+  <option value="value3">Mesa 2</option>
+      <option value="value3">Mesa 3</option>
+      <option value="value3">Mesa 4</option>
+      <option value="value3">Mesa 5</option>
+</select>  
+                        
+   <br><br>
+     <input class="" type="text" placeholder="mesero "> <br><br>
+     <input class="" type="text" placeholder="cliente"><br><br>
+     <textarea class="form-control" rows="4">observaciones</textarea>
+                          
+                        
+                        
+
+                   
+                       
+                                   
+                        <br>
+                        <button type="button" class="btn btn-success" data-dismiss="modal">ok</button></div>
                 </div>
             </div>
-            <script src="assets/js/jquery.min.js"></script>
-            <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-            <script src="assets/js/script.min.js"></script>
-            <script src="assets/js/jquery.min.js"></script>
-            <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        </div>
+        
+        
+        
+        <a class="btn btn-outline-primary">Platillos</a>
+    <a class="btn btn-outline-primary">Bebidas</a>
+    <a class="btn btn-outline-primary">Postres</a>
+        <div class="form-group pull-right col-lg-4"><input type="text" class="search form-control" placeholder="buscar descripcion.."></div><span class="counter pull-right"></span>
+        <div class="table-responsive table-bordered table table-hover table-bordered results">
+            <table class="table table-bordered table-hover">
+                <thead class="bill-header cs">
+                    <tr>
+                        <th id="trs-hd" >IdOrden</th>
+                        <th id="trs-hd" >IdMesa</th>
+                        <th id="trs-hd" >Descripcion</th>
+                        <th id="trs-hd" >Llevar</th>
+                        <th id="trs-hd" >agregar</th>
+                        <th id="trs-hd" >cantidad</th>
+                        <th id="trs-hd" >precio Unitario</th>
+                         <th id="trs-hd" >total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="warning no-result">
+                    
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>05</td>
+                        <td>Pupusas</td>
+                        <td>No</td>
+                        <td><button class="btn btn-outline-success" style="margin-left: 5px;" type="submit"><i class="fa fa-plus-square" style="font-size: 15px;"></i></button>
+                        <button class="btn btn-outline-danger" style="margin-left: 5px;" type="submit"><i class="fa fa-minus-square" style="font-size: 15px;"></i></button> 
+                        </td>
+                        
+                        <td>1</td>
+                        <td>$1.00</td>
+                        <td>$1.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div><button class="btn btn-outline-primary" type="button">agregar orden</button>
+<button type="button" class="btn btn-outline-danger" onclick="location.href='dashboard.html'">cancelar orden </button>
+</div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>
