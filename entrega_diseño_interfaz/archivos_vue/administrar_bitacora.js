@@ -62,23 +62,21 @@ var vueBitacoras = new Vue({
 
             }
         },
-        cargarDatos: function() {
+        cargarDatos: function(event) {
             //cargando las categorias
-            axios.get('http://localhost:3000/api/bitacoras')
-                .then(function(res) {
-                    vueBitacoras.bitacoras = res.data;
-                })
-                .catch(function(error) {
-                    // handle error
-                    console.log(error);
-                });
-
-        },
-        bitacorasbyfecha: function() {
-            //cargando las bitacoras entre dos fechas
             if (this.fecha1 == null && this.fecha2 == null) {
-                alert = ("seleccione el rango de fechas para filtrar las bitacoras");
-            } else {
+                axios.get('http://localhost:3000/api/bitacoras')
+                    .then(function(res) {
+                        vueBitacoras.bitacoras = res.data;
+                    })
+                    .catch(function(error) {
+                        // handle error
+                        console.log(error);
+                    });
+            } else if (this.fecha1 != null && this.fecha2 != null) {
+                //cargando las bitacoras entre dos fechas
+
+                event.preventDefault();
                 axios.get('http://localhost:3000/api/bitacoras?filter=%7B%22where%22%3A%20%7B%22fecha%22%3A%20%7B%22between%22%3A%20%5B%22' + this.fecha1 + '%22%2C%22' + this.fecha2 + '%22%5D%7D%7D%7D')
                     .then(function(res) {
                         vueBitacoras.bitacoras = res.data;
@@ -88,22 +86,23 @@ var vueBitacoras = new Vue({
                         console.log(error);
                     });
             }
+
         },
         mostrarEliminar: function() {
             $('#modalEliminar').modal('show');
         },
-        eliminarBitacoras: function() {
+        eliminarBitacora: function() {
             console.log();
             axios.delete('http://localhost:3000/api/bitacoras/' + this.bitacoras[this.bitacoraSelected].id)
                 .then(function(res) {
                     console.log("DELETE BITACORA");
-                    vuecatego.cargarDatos();
-                    vuecatego.mostrarAlerta("Bitacora Eliminada", "La Bitacora se eliminó de la base de datos con exito");
+                    vueBitacoras.cargarDatos();
+                    vueBitacoras.mostrarAlerta("Bitacora Eliminada", "La Bitacora se eliminó de la base de datos con exito");
 
                 })
                 .catch(function(error) {
                     // handle error
-                    vuecatego.mostrarAlerta("Error:", error);
+                    vueBitacoras.mostrarAlerta("Error:", error);
 
                     console.log(error);
                 });
@@ -113,7 +112,6 @@ var vueBitacoras = new Vue({
 
     mounted: function() {
         this.cargarDatos();
-        this.bitacorasbyfecha();
     },
 
 });

@@ -23,6 +23,7 @@
 
 
 
+
 </head>
 
 <body>
@@ -68,12 +69,13 @@
                                     <input id="fechados" type="date" v-model="fecha2" />
                                     <br>
                                 </div>
+                                <div class="container mt-1"></div>
                                 <hr>
                                 <br>
-                                <button class="btn btn-primary" v-on:click.prevent="bitacorasbyfecha();">
+                                <button class="btn btn-primary" v-on:click.prevent="cargarDatos">
                         <i class="fa fa-search"></i> Obtener Bitacoras
                     </button>
-                                <button class="btn btn-danger" v-on:click.prevent="cargarBitacoras()">
+                                <button class="btn btn-danger" style="margin-left: 20px;">
                         <i class="fa fa-search"></i> Eliminar Bitacoras
                     </button>
                                 <br>
