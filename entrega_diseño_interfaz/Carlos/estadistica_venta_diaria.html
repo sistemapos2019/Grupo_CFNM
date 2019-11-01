@@ -5,7 +5,7 @@
     <link rel="shortcut icon" href="../phpThumb_generated_thumbnailico.ico">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Administrar Bitacoras</title>
+    <title>Venta Diaria</title>
 
 
     <link rel="stylesheet" href="assets1/fonts/material-icons.min.css">
@@ -48,7 +48,7 @@
             </div>
         </nav>
     </div>
-    <div class="container" id="AdminBitacoras">
+    <div class="container" id="AdminVentaDiaria">
 
         <div>
             <div>
@@ -60,21 +60,20 @@
 
                         <div class="card-body table-responsive ">
                             <div class="row">
-                                <label id="hasta">Desde </label>
-                                <label id="hasta" style="margin-left: 120px;">Hasta </label>
+                                <label id="hasta">seleccione una fecha: </label>
                                 <div class="input-group">
 
-                                    <input id="fechauno" type="date" v-model="fecha1" />
+                                    <input id="fechauno" type="date" v-model="fecha1" v-on:change="cargarDatos();" />
 
-                                    <input id="fechados" type="date" v-model="fecha2" />
                                     <br>
                                 </div>
                                 <div class="container mt-1"></div>
                                 <hr>
                                 <br>
-                                <button class="btn btn-primary" v-on:click.prevent="bitacorasbyfecha();">
+                                <button class="btn btn-primary" v-on:click="detalleorden();">
                         <i class="fa fa-search"></i> Obtener ventas
                     </button>
+
                                 <br>
                                 <div class="alert alert-success collapse" role="alert" id="miAlerta">
                                     <span><strong>{{ alerta.titulo }} :</strong>&nbsp;{{ alerta.mensaje }}.</span><i class="fa fa-close close" v-on:click="cerrarAlerta();"></i></div>
@@ -94,9 +93,9 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="list-group-item-action" v-for="(bitacora, index) in bitacoras" v-on:click="bitacoraSelected=index;" v-bind:class="{ 'font-weight-bold' : bitacoraSelected==index }">
-                                        <td><i></i></td>
-                                        <td></td>
+                                    <tr class="list-group-item-action" v-for="(ventadiaria, index) in detallexorden" v-on:click="ventaSelected=index;" v-bind:class="{ 'font-weight-bold' : ventaSelected==index }">
+                                        <td><i></i>{{nombre(ventadiaria.idproducto)}}</td>
+                                        <td>{{ventadiaria.cantidad}}</td>
                                     </tr>
                                 </tbody>
                             </table>
