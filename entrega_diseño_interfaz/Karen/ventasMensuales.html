@@ -35,86 +35,113 @@
             </div>
         </nav>
     </div>
-    <br>
-    <form>
-        <div class="mover">
-            <label class="flex-column">Año</label>
-            <select>
-                <option value"12" selected>2019</option>
-                <option value"13">2018</option>
-                <option value"14">2017</option>
-            </select>
+    <div class="container" id="ventasMensuales">
 
-            <label class="flex-column">Mes</label>
-            <select>
-                <option value"15" selected>Enero</option>
-                <option value"16">Febrero</option>
-                <option value"17">Marzo</option>
-            </select>
+        <div>
+            <div>
+                <div class="container mt-4 table-responsive">
+                    <div class="card border-info table-responsive">
+                        <div class="card-header bg-info text-black table-responsive">
+                            Ventas Mensuales
+                        </div>
 
+                        <div class="card-body table-responsive ">
+                            <div class="row">
+                                <label id="desde">Desde </label>
+                                <div class="input-group">
 
+                                    <input id="fechauno" type="date" v-model="fecha1" />
 
-        </div>
-        <div class="container mt-4">
-            <div class="card border-info">
-                <div class="card-header bg-info text-black">
-                    Venta Mensual
-                </div>
-                <div class="card-body">
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th>Dia</th>
-                                <th>Documentos Emitidos Del No.</th>
-                                <th>Documentos Emitidos Al No.</th>
-                                <th>Ventas</th>
-                                <th>Propinas</th>
-                                <th>Total de Ventas Diarias</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <c:forEach var="dato" items="${listar}">
+                                    <br>
 
-                            </c:forEach>
-                        </tbody>
-                    </table>
+                                </div>
+                                <label id="hasta">Hasta </label>
+                                <div class="input-group">
 
+                                    <input id="fechados" type="date" v-model="fecha2" v-on:change="cargarDatos();" />
 
-                </div>
+                                    <br>
 
-            </div>
-        </div>
-    </form>
-    <div class="modal fade" role="dialog" tabindex="-1" id="modal1">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Estadistica</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                </div>
-                <div class="modal-body">
-                </div>
-                <div class="container mt-4">
-                    <div class="card border-info">
-                        <div class="card-header bg-info text-black"> Seleccione Tipo De Estadistica</div>
-                        <br>
-                        <a class="btn btn-outline-success" href="./../Carlos/estadistica_venta_diaria.html">Venta
-                            Diaria</a>
-                        <br>
-                        <a class="btn btn-outline-success" href="./../Karen/VentaSemanal.html">Venta
-                            Semanal</a>
-                        <br>
-                        <a class="btn btn-outline-success" href="./../Karen/ventasMensuales.html">Venta
-                            Mensual</a>
-                        <br>
-                        <br>
-                        <br>
+                                </div>
+
+                               
+
+                                <div class="container mt-1"></div>
+                                <hr>
+                                <br>
+                                <button class="btn btn-primary" v-on:click="detalleorden();">
+                        <i class="fa fa-search"></i> Obtener ventas
+                    </button>
+
+                                <br>
+                                <div class="alert alert-success collapse" role="alert" id="miAlerta">
+                                    <span><strong>{{ alerta.titulo }} :</strong>&nbsp;{{ alerta.mensaje }}.</span><i class="fa fa-close close" v-on:click="cerrarAlerta();"></i></div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th><a href="#" v-on:click.prevent="orderBy('PRODUCTO')">Producto<i
+                                        class="fa fa-long-arrow-up"
+                                        v-show="orderByCampo=='SUCESO' &amp;&amp; orderByAsc==1"></i><i
+                                        class="fa fa-long-arrow-down"
+                                        v-show="orderByCampo=='SUCESO' &amp;&amp; orderByAsc==-1"></i></a>
+                                        </th>
+                                        <th>Cantidad Vendida</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="list-group-item-action" v-for="(ventadiaria, index) in detallexorden" v-on:click="ventaSelected=index;" v-bind:class="{ 'font-weight-bold' : ventaSelected==index }">
+                                        <td><i></i>{{nombre(ventadiaria.idproducto)}}</td>
+                                        <td>{{ventadiaria.cantidad}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-
                 </div>
             </div>
         </div>
+
+        <div class="modal fade" role="dialog" tabindex="-1" id="modal1">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Estadistica</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    </div>
+                    <div class="modal-body">
+                    </div>
+                    <div class="container mt-4">
+                        <div class="card border-info">
+                            <div class="card-header bg-info text-black"> Seleccione Tipo De Estadistica</div>
+                            <br>
+                            <a class="btn btn-outline-success" href="./../Carlos/estadistica_venta_diaria.html">Venta
+                                    Diaria</a>
+                            <br>
+                            <a class="btn btn-outline-success" href="./../Karen/VentaSemanal.html">Venta
+                                    Semanal</a>
+                            <br>
+                            <a class="btn btn-outline-success" href="./../Karen/ventasMensuales.html">Venta
+                                    Mensual</a>
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="./../vue/vue.js"></script>
+        <script src="./../axios/axios.min.js"></script>
+        <script src="./../archivos_vue/ventasMensuales.js"></script>
 </body>
 
 </html>

@@ -30,7 +30,7 @@ var vueLogin= new Vue({
 
             if (vueLogin.comprobarUsuario(vueLogin.parametro.login)==true && vueLogin.comprobarPassword(vueLogin.parametro.pin)==true) {
                 alert("AUTENTICACION EXITOSA")
-                abrirModal();
+                vueLogin.abrirModal();
                 //url="dashboard.html";
                // window.location.href= url;
             } else {
@@ -81,8 +81,8 @@ return existe;
         },
 
 // la funcion loginPantalla no ira aqui si no que en las otras pantalas
-loginporPantalla:function(event){
-
+loginporPantalla:function(agregar){
+console.log("imprimir algo");
 axios.get('http://localhost:3000/api/parametros')//le paso la url para ir a traer los datos de la api
            
 .then(function (response){
@@ -92,7 +92,7 @@ axios.get('http://localhost:3000/api/parametros')//le paso la url para ir a trae
 if (vueLogin.parametros[11].valor==1 ) {
 
 //     let boton  = event.target.data("idModal");
-// vueLogin.idmodal = boton;
+vueLogin.idmodal = agregar;
 
 //alert(event.currentTarget.tagName)
 vueLogin.mostrarlogin();
@@ -106,9 +106,9 @@ vueLogin.mostrarlogin();
 },
 
 abrirModal:function(){
-$('#inicioSeccion').modal("hide");
-// $(vueLogin.idmodal).modal("show")
-windows.location.href=vueLogin.idmodal;
+$('#inicioSecion').modal("hide");
+ $(vueLogin.idmodal).modal("show")
+//windows.location.href=vueLogin.idmodal;
 }
 
 
