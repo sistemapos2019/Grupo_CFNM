@@ -23,6 +23,13 @@ var vuecompras = new Vue({
         },
     },
     methods: {
+        fechahoy: function() {
+            var f = new Date();
+            (f.getDate() + "-" + (f.getMonth() + 1) + "-" + f.getFullYear());
+            return f;
+
+        },
+
         mostrarAlerta: function(titu, msg) {
             this.alerta.titulo = titu;
             this.alerta.mensaje = msg;
@@ -113,6 +120,17 @@ var vuecompras = new Vue({
                     vuecompras.cargarDatos();
                     vuecompras.mostrarAlerta("Compra Agregada", "Se agregó una nueva compra");
                 })
+            bitacoraguardar = {
+
+                "idUsuario": 1,
+                "fecha": this.fechahoy(),
+                "suceso": "se agrego una compra nueva"
+            }
+            axios.post('http://localhost:3000/api/bitacoras', bitacoraguardar)
+                .then(function(res) {
+
+
+                })
                 .catch(function(error) {
                     // handle error
                     vuecompras.mostrarAlerta("Error", error);
@@ -125,6 +143,17 @@ var vuecompras = new Vue({
                 .then(function(res) {
                     console.log("UPDATED Compra");
                     vuecompras.mostrarAlerta("Compra Modificada", "Se modifico la compra satisfactoriamente");
+
+                })
+            bitacoraguardar = {
+
+                "idUsuario": 1,
+                "fecha": this.fechahoy(),
+                "suceso": "se modifico una compra"
+            }
+            axios.post('http://localhost:3000/api/bitacoras', bitacoraguardar)
+                .then(function(res) {
+
 
                 })
                 .catch(function(error) {
@@ -141,6 +170,17 @@ var vuecompras = new Vue({
                     console.log("DELETE COMPRA");
                     vuecompras.cargarDatos();
                     vuecompras.mostrarAlerta("compra Eliminada", "La compra se eliminó de la base de datos con exito");
+
+                })
+            bitacoraguardar = {
+
+                "idUsuario": 1,
+                "fecha": this.fechahoy(),
+                "suceso": "se elimino una categoria"
+            }
+            axios.post('http://localhost:3000/api/bitacoras', bitacoraguardar)
+                .then(function(res) {
+
 
                 })
                 .catch(function(error) {

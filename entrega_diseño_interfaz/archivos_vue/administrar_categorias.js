@@ -16,6 +16,12 @@ var vuecatego = new Vue({
         },
     },
     methods: {
+        fechahoy: function() {
+            var f = new Date();
+            (f.getDate() + "-" + (f.getMonth() + 1) + "-" + f.getFullYear());
+            return f;
+
+        },
         mostrarAlerta: function(titu, msg) {
             this.alerta.titulo = titu;
             this.alerta.mensaje = msg;
@@ -98,18 +104,41 @@ var vuecatego = new Vue({
                     vuecatego.cargarDatos();
                     vuecatego.mostrarAlerta("Categoria Agregada", "Se agregó la nueva categoria");
                 })
-                .catch(function(error) {
-                    // handle error
-                    vuecatego.mostrarAlerta("Error", error);
+            bitacoraguardar = {
 
-                    console.log(error);
-                });
+                "idUsuario": 1,
+                "fecha": this.fechahoy(),
+                "suceso": "se agrego una categoria nueva"
+            }
+            axios.post('http://localhost:3000/api/bitacoras', bitacoraguardar)
+                .then(function(res) {
+
+
+                })
+
+            .catch(function(error) {
+                // handle error
+                vuecatego.mostrarAlerta("Error", error);
+
+                console.log(error);
+            });
         },
         modificarCategoria: function() {
             axios.put('http://localhost:3000/api/Categoria', this.categorias[this.categoriaSelected])
                 .then(function(res) {
                     console.log("UPDATED Categoria");
                     vuecatego.mostrarAlerta("Categoria Modificada", "Se modifico la categoria satisfactoriamente");
+
+                })
+            bitacoraguardar = {
+
+                "idUsuario": 1,
+                "fecha": this.fechahoy(),
+                "suceso": "se modifico una categoria nueva"
+            }
+            axios.post('http://localhost:3000/api/bitacoras', bitacoraguardar)
+                .then(function(res) {
+
 
                 })
                 .catch(function(error) {
@@ -126,6 +155,17 @@ var vuecatego = new Vue({
                     console.log("DELETE CATEGORIA");
                     vuecatego.cargarDatos();
                     vuecatego.mostrarAlerta("categoria Eliminada", "La categoria se eliminó de la base de datos con exito");
+
+                })
+            bitacoraguardar = {
+
+                "idUsuario": 1,
+                "fecha": this.fechahoy(),
+                "suceso": "se elimino una categoria nueva"
+            }
+            axios.post('http://localhost:3000/api/bitacoras', bitacoraguardar)
+                .then(function(res) {
+
 
                 })
                 .catch(function(error) {

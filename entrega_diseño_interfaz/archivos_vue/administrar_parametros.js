@@ -12,6 +12,12 @@ var vueparametro = new Vue({
         parametros: [],
     },
     methods: {
+        fechahoy: function() {
+            var f = new Date();
+            (f.getDate() + "-" + (f.getMonth() + 1) + "-" + f.getFullYear());
+            return f;
+
+        },
         mostrarAlerta: function(titu, msg) {
             this.alerta.titulo = titu;
             this.alerta.mensaje = msg;
@@ -76,6 +82,17 @@ var vueparametro = new Vue({
                         'Parametro Modificado',
                         'Se modifico el parametro satisfactoriamente'
                     );
+                })
+            bitacoraguardar = {
+
+                "idUsuario": 1,
+                "fecha": this.fechahoy(),
+                "suceso": "se modifico un parametro"
+            }
+            axios.post('http://localhost:3000/api/bitacoras', bitacoraguardar)
+                .then(function(res) {
+
+
                 })
                 .catch(function(error) {
                     // handle error
