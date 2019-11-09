@@ -2,141 +2,652 @@
 <html>
 
 <head>
+    <link rel="shortcut icon" href="../phpThumb_generated_thumbnailico.ico">
+    <link rel="shortcut icon" href="../phpThumb_generated_thumbnailico.ico">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Dashboard</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/material-icons.min.css">
+    <link rel="stylesheet" href="assets/fonts/typicons.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+
+
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/Google-Style-Text-Input.css">
+    <link rel="stylesheet" href="assets/css/scrollSpyModal.css">
+    <link rel="stylesheet" href="assets/css/Search-Field-With-Icon.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets1/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets1/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets1/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets1/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets1/css/Data-Table-1.css">
+    <link rel="stylesheet" href="assets1/css/Data-Table.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="assets1/css/styles.css">
 </head>
 
-<body><div>
-        <nav class="navbar navbar-light navbar-expand-md sticky-top navigation-clean-button" style="height:80px;background-color:#737b82;color:#ffffff;">
-            <div class="container-fluid"><a class="navbar-brand" href="dashboard.html"><i class="material-icons">restaurant</i>&nbsp;RestBar</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navcol-1">
-                    <ul class="nav navbar-nav ml-auto">
-                        
-                        <li class="nav-item" role="presentation"><a class="nav-link" style="color:#ffffff;" href="#"><i class="fa fa-sign-in"></i>Iniciar Sesion&nbsp; &nbsp;&nbsp;</a></li>
-                    </ul>
-                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#" style="color: #fff9f9;">Administrar&nbsp;</a>
-                        <div class="dropdown-menu bg-info" role="menu"><a class="dropdown-item" role="presentation" href="/home/cuellar/Escritorio/entrega_diseño_interfaz/Carlos/administrar_categorias.html">Categorias</a><a class="dropdown-item" role="presentation" href="/home/cuellar/Escritorio/entrega_diseño_interfaz/William/administrarproductos.html">Productos</a><a class="dropdown-item" role="presentation" href="/home/cuellar/Escritorio/entrega_diseño_interfaz/Carlos/administracion_parametros.html">Parametros</a>
-                            <a class="dropdown-item" role="presentation" href="/home/cuellar/Escritorio/entrega_diseño_interfaz/estadisticas/index.html">Estadisticas</a><a class="dropdown-item" role="presentation" href="/home/cuellar/Escritorio/entrega_diseño_interfaz/William/administrarmesas.html">Mesas</a><a class="dropdown-item" role="presentation" href="/home/cuellar/Escritorio/entrega_diseño_interfaz/William/administrarusuarios.html">Usuarios Y roles</a><a class="dropdown-item" role="presentation" href="/home/cuellar/Escritorio/entrega_diseño_interfaz/Carlos/administrar_compras.html">Compras</a><a class="dropdown-item" role="presentation" href="#">Cerrar Sesion</a></div>
-                    </li>
-            </div>
-    </div>
-    </nav>
-    </div>
-<br>
+<body>
+    <div id="vueApp">
+        <div>
+            <nav class="navbar navbar-light navbar-expand-md sticky-top navigation-clean-button" style="height:80px;background-color:#737b82;color:#ffffff;">
+                <div class="container-fluid"><a class="navbar-brand" href="dashboard.html"><i class="material-icons">restaurant</i>&nbsp;RestBar</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navcol-1">
+                        <ul class="nav navbar-nav ml-auto">
 
-<div class="col-md-12 search-table-col">
-    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
+                            <li class="nav-item" role="presentation"><a class="nav-link" style="color:#ffffff;" href="#"><i class="fa fa-sign-in"></i>Iniciar Sesion&nbsp; &nbsp;&nbsp;</a></li>
+                        </ul>
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#" style="color: #fff9f9;">Administrar&nbsp;</a>
+                            <div class="dropdown-menu bg-info" role="menu"><a class="dropdown-item" role="presentation" href="./../Carlos/administrar_categorias.html">Categorias</a><a class="dropdown-item" role="presentation" href="./../William/administrarproductos.html">Productos</a>
+                                <a class="dropdown-item" role="presentation" href="./../Carlos/administracion_parametros.html">Parametros</a>
+                                <a class="dropdown-item" role="presentation" data-toggle="modal" data-target="#modal1">Estadisticas</a><a class="dropdown-item" role="presentation" href="./../William/administrarmesas.html">Mesas</a>
+                                <a class="dropdown-item" role="presentation" href="./../William/administrarusuarios.html">Usuarios Y roles</a>
+                                <a class="dropdown-item" role="presentation" href="./../Carlos/index.html">Bitacora</a>
+                                <a class="dropdown-item" role="presentation" href="./../Carlos/administrar_compras.html">Compras</a><a class="dropdown-item" role="presentation" href="#">Cerrar Sesion</a></div>
+                        </li>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <br>
+
+        <div class="col-md-12 search-table-col">
+            <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
   Nueva Orden
 </button>
-        <div class="modal fade" id="exampleModal" tabindex="-1">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel" text-align: center>Inicio De sesion</h5><button type="button" class="close" data-dismiss="modal"><span>×</span></button></div>
-                    <div class="modal-body">
-                        <h8>Ingrese su usuario y password </h8><br>
-                        <h8> asignado por favor</h8>
+            <div class="modal fade" id="exampleModal" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel" text-align: center>Inicio De sesion</h5><button type="button" class="close" data-dismiss="modal"><span>×</span></button></div>
+                        <div class="modal-body">
+                            <h6>Ingrese su usuario y password </h6><br>
+                            <h6> asignado por favor</h6>
 
+                        </div>
+                        <div class="modal-body">
+                            <input type="text" class="form-control" placeholder="usuario" />
+
+                        </div>
+                        <div class="modal-body"><input type="text" class="form-control" placeholder="Password" /></div>
+                        <div class="modal-footer">
+
+
+
+                            <button class="btn btn-outline-danger" type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar
+                        </button>
+
+                            <!--  <a href="nuevaOrden.html" class="btn btn-primary">iniciar</a>-->
+
+                            <!-- modal iniciar orden -->
+
+                            <button class="btn btn-outline-success" data-placement="bottom" style="margin-left: 5px;" v-on:click="nuevaorden1();">Iniciar Secion</button>
+
+
+
+                            <div class="modal fade" role="dialog" tabindex="-1" id="modaliniciarorden">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Bienvenid@ a Nueva Orden </h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button> </div>
+                                        <div class="modal-body">
+                                            <nav class="navbar navbar-light navbar-expand-md" id="menuNuevaOrden">
+                                                <div class="container-fluid"><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-2"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                                                    <div class="collapse navbar-collapse" id="navcol-2">
+                                                        <ul class="nav navbar-nav">
+                                                            <li class="nav-item" role="presentation"><a class="nav-link" href="#pasoone">Datos Generales</a></li>
+                                                            <li class="nav-item" role="presentation"><a class="nav-link" href="#pasotwo">Categorias y agregar productos</a></li>
+                                                            <li class="nav-item" role="presentation"><a class="nav-link" href="#pasotree">Detalle de Orden</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </nav>
+                                            <div class="container-fluid text-center">
+                                                <div id="modalSpy" class="mt-4 text-center p-4" data-spy="scroll" data-target="menuNuevaOrden" data-offset="0">
+
+                                                    <form id="pasoone">
+
+                                                        <div class="input-group"><label>Tipo de Orden</label>
+                                                            <select style="margin-right: 1000px;margin-top: 35px;" v-model="detalleorden.llevar">
+  
+  
+  <option value="0">  para comer aqui</option>
+  <option value="1">  para llevar</option>
+</select>
+                                                        </div>
+                                                        <br>
+
+                                                        <div class="input-group">
+                                                            <label>Seleccione Mesa</label>
+                                                            <select style="margin-right: 100px;margin-top: 35px;" v-model="detalleorden.idmesa">
+           
+          <option v-for="option in mesas" v-bind:value="option.id"    value={{option.id}} >{{option.mesa}}</option>
+          
+          
+        </select>
+
+                                                        </div>
+
+
+
+
+
+                                                        <br>
+                                                        <br>
+                                                        <input class="" type="text" placeholder="Nombre mesero " v-model="detalleorden.idusuario">
+                                                        <input class="" type="text" placeholder="Nombre cliente" v-model="detalleorden.cliente"><br>
+                                                        <textarea class="form-control" rows="3" placeholder="Observaciones" v-model="detalleorden.observacion"></textarea>
+
+
+                                                    </form>
+
+                                                    <br>
+
+
+                                                    <div id="pasotwo" class="container">
+
+
+
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <ul class="nav nav-tabs">
+                                                                    <li class="nav-item" href="#" v-on:click.prevent="categoriaSelected=Cate.id;" v-for="Cate in categorias">
+                                                                        <a class="nav-link" href="#" v-on:click="categoriaSelected=Cate.id;" v-bind:class="{ 'font-weight-bold': categoriaSelected==Cate.id, 
+                                       'text-dark': categoriaSelected==Cate.id }">{{ Cate.nombre }}</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="table-responsive mt-5">
+                                                            <table class="table" id="tablaprodutos">
+                                                                <caption></caption>
+                                                                <thead>
+                                                                    <!-- <tr v-for="option in categoria"> -->
+                                                                    <th>Producto</th>
+                                                                    <th>Cantidad</th>
+                                                                    <th>precio/unidad</th>
+                                                                    <th>agregar</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+
+                                                                    <!--en el index cuando se da click mandar como parametro capturaravalor(index)  -->
+                                                                    <!--v-show="elProd.idcategoria: agrega los productos  a la tabla segun elija categoria-->
+
+                                                                    <tr class="list-group-item-action" v-for="(elProd,index) in productos " v-show="elProd.idcategoria==categoriaSelected" v-on:click="productoSelected=index" v-bind:class="{'font-weight-bold':productoSelected==index}">
+                                                                        <td id="tgf">{{ elProd.nombre}}</td>
+                                                                        <td id="texto" align="center"><input type="number" id="cantidad1" style="width:50px;height:15px" placeholder="1" min="1" max="20" v-model="cantidadtabla"></td>
+                                                                        <td>$ {{ elProd.precio }}</td>
+                                                                        <td><a href="#" v-on:click.prevent="capturardatos(productoSelected);" id="btn"><i class="fa fa-edit" ></i></a></td>
+                                                                    </tr>
+
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+
+                                                    <div id="pasotree">
+                                                        <form><span>Mesa:  {{detalleorden.idmesa}}   </span>
+                                                            <span>cliente:{{detalleorden.cliente}}   </span>
+                                                            <span> Mesero:{{detalleorden.idusuario}}     </span>
+                                                        </form>
+                                                        <div class="table-responsive">
+                                                            <table class="table">
+                                                                <caption>Resumen</caption>
+                                                                <thead>
+                                                                    <tr v-model="detalleorden">
+                                                                        <th>Cantidad</th>
+                                                                        <th>Producto</th>
+                                                                        <th>P/u</th>
+                                                                        <th>Total</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <!--<tr v-for="detalle in productosxdetalle">-->
+                                                                    <tr v-for="(detalle,index) in productosxdetalle">
+                                                                        <td>{{cantidadxtabla[index].cantidad}}</td>
+                                                                        <td>{{detalle.nombre}}</td>
+                                                                        <td>{{detalle.precio}}</td>
+                                                                        <td>{{cantidadxtabla[index].cantidad*detalle.precio}}</td>
+                                                                    </tr>
+
+                                                                </tbody>
+                                                                <tfoot>
+                                                                    <tr>
+                                                                        <td colspan="3"></td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                </tfoot>
+                                                            </table>
+
+                                                        </div>
+
+
+
+
+
+
+
+
+
+
+                                                        <button type="button" class="btn btn-outline-primary" v-on:click="agregarnuevaorden" data-dismiss="modal"> Agregar Orden</button>
+                                                        <button type="button" class="btn btn-outline-primary" onclick="location.href='dashboard.html'"> Cancelar Orden</button>
+
+
+
+
+
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+                            <!--  modal finalizar orden    -->
+
+
+
+
+
+                        </div>
                     </div>
+                </div>
+            </div>
+            <div class="form-group pull-right col-lg-4"><input type="text" class="search form-control" placeholder="buscar cuenta.." /></div><span class="counter pull-right"></span>
+            <div>
+                <div class="table-responsive table-bordered table table-hover table-bordered results">
+                    <table class="table table-bordered table-hover">
+                        <thead class="bill-header cs">
+                            <tr>
+
+                                <th id="trs-hd">mesa</th>
+                                <th id="trs-hd">mesero</th>
+                                <th id="trs-hd">cliente</th>
+                                <th id="trs-hd">total</th>
+
+                                <th id="trs-hd">llevar </th>
+                                <th id="trs-hd">tiempo preparado</th>
+                                <th id="trs-hd">Preparado</th>
+                                <th id="trs-hd">Tiempo Rapido</th>
+
+                                <th id="trs-hd">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="(dashboard,index) in dashboardprincipal" v-on:click="ordenSelected=index;" v-bind:class="{ 'font-weight-bold' : ordenSelected==index }">
+
+                                <td>{{dashboard.Mesa}} </td>
+                                <td>{{dashboard.Mesero}}</td>
+                                <td>{{dashboard.Cliente}}</td>
+                                <td>{{dashboard.Total}}</td>
+                                <td>{{dashboard.Estado}}</td>
+
+                                <td>{{dashboard.TiempoPreparado}}</td>-
+                                <td>{{dashboard.llevar}}</td>
+                                <td> {{dashboard.Preparado}}
+
+                                </td>
+
+
+
+                                <td>
+                                    <button class="btn btn-outline-success" data-toggle="tooltip" data-placement="bottom" style="margin-left: 5px;" v-on:click="cobrarorden();" type="submit" title="cobrar orden"><i class="fa fa-money" style="font-size: 15px; " ></i></button>
+
+                                    <!-- inicia modal cobrar orden -->
+                                    <div class="modal fade" role="dialog" tabindex="-1" id="modalcobrarorden">
+                                        <div class="modal-dialog modal-lg" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Cobrar Orden </h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button> </div>
+                                                <div class="modal-body">
+                                                    <nav class="navbar navbar-light navbar-expand-md" id="menuNuevaOrden">
+                                                        <div class="container-fluid"><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-2"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                                                            <div class="collapse navbar-collapse" id="navcol-2">
+                                                                <ul class="nav navbar-nav">
+                                                                    <li class="nav-item" role="presentation"><a class="nav-link" href="#pasouno">Detalles de orden</a></li>
+                                                                    <li class="nav-item" role="presentation"><a class="nav-link" href="#pasodos">Productos de Orden</a></li>
+
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </nav>
+                                                    <div class="container-fluid text-center">
+                                                        <div id="modalSpy" class="mt-4 text-center p-4" data-spy="scroll" data-target="menuNuevaOrden" data-offset="0">
+                                                            <form id="pasouno">
+                                                                <div class="form-group row">
+                                                                    <div class="group">
+                                                                        <!-- <input id="input-search" type="text" class="form-control" v-model="textSearch" placeholder='Search...' -->
+                                                                        <input type="text" required v-model="Ordenes">
+                                                                        <span class="highlight"></span>
+                                                                        <span class="bar"></span>
+
+                                                                        <label>orden</label>
+
+
+
+
+
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="form-group row">
+                                                                    <div class="group">
+                                                                        <input type="text" required v-model="nuevaorden.idmesa">
+                                                                        <span class="highlight"></span>
+                                                                        <span class="bar"></span>
+                                                                        <label>Mesa</label>
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="form-group row">
+                                                                    <div class="group">
+                                                                        <input type="text" required v-model="nuevaorden.idusuario">
+                                                                        <span class="highlight"></span>
+                                                                        <span class="bar"></span>
+                                                                        <label>Mesero</label>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="form-group row">
+
+                                                                    <div class="group">
+                                                                        <input type="text" required v-model="nuevaorden.cliente">
+                                                                        <span class="highlight"></span>
+                                                                        <span class="bar"></span>
+                                                                        <label>cliente</label>
+                                                                    </div>
+
+
+                                                                </div>
+
+                                                            </form>
+
+                                                            <div id="pasodos">
+
+                                                                <div class="table-responsive mt-5">
+                                                                    <table class="table">
+                                                                        <caption>Productos</caption>
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th>Producto</th>
+                                                                                <th>Cantidad</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <!--recorrer la tabla-->
+                                                                            <tr v-for="">
+                                                                                <td></td>
+                                                                                <td>
+
+                                                                                    <!-- aqui ira cantidad de orden -->
+
+                                                                                </td>
+                                                                            </tr>
+
+                                                                        </tbody>
+                                                                    </table>
+
+
+
+                                                                </div>
+                                                                <button type="button" class="btn btn-outline-primary"> Cobrar Orden</button>
+                                                                <button type="button" class="btn btn-outline-danger"> Cancelar Orden</button>
+                                                            </div>
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <!-- finaliza modal -->
+                                    <button class="btn btn-outline-success" data-toggle="tooltip" data-placement="bottom" style="margin-left: 5px;" type="submit" title="imprimir orden"><i class="fa fa-print" style="font-size: 15px;" onclick="location.href='./../William/ticket.html'"></i></button>
+
+
+                                    <!--  inicio de modal  modificar orden-->
+                                    <!-- aqui es essssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss -->
+                                    <button class="btn btn-outline-danger" v-on:click="mostrarModificar(ordenSelected);" data-toggle="tooltip" data-placement="bottom" style="margin-left: 5px;" type="submit" title="modificar orden"><i class="fa fa-undo" style="font-size: 15px;"> </i>  </button>
+
+                                    <div class="modal fade" role="dialog" tabindex="-1" id="nueva">
+                                        <div class="modal-dialog modal-lg" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                                                <div class="modal-body">
+                                                    <nav class="navbar navbar-light navbar-expand-md" id="menuNuevaOrden">
+                                                        <div class="container-fluid"><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-2"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                                                            <div class="collapse navbar-collapse" id="navcol-2">
+                                                                <ul class="nav navbar-nav">
+                                                                    <li class="nav-item" role="presentation"><a class="nav-link" href="#paso1">Paso 1</a></li>
+                                                                    <li class="nav-item" role="presentation"><a class="nav-link" href="#paso2">Paso 2</a></li>
+                                                                    <!-- <li class="nav-item" role="presentation"><a class="nav-link" href="#paso3">Paso 3</a></li> -->
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </nav>
+                                                    <div class="container-fluid text-center">
+                                                        <div id="modalSpy" class="mt-4 text-center p-4" data-spy="scroll" data-target="menuNuevaOrden" data-offset="0">
+
+                                                            <form id="paso1">
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend"><span class="input-group-text">IdOrden:</span></div><input class="form-control" type="text" readonly="readonly" v-model="idordenmodificar">
+                                                                    <div class="input-group-append"></div>
+                                                                </div>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend"><span class="input-group-text">Idmesero:</span></div><input class="form-control" type="text" readonly="readonly" v-model="idusuariomodificar">
+                                                                    <div class="input-group-append"></div>
+                                                                </div>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend"><span class="input-group-text">NombreUsuario:</span></div><input class="form-control" type="text" readonly="readonly" v-model="nombreusuariomodificar">
+                                                                    <div class="input-group-append"></div>
+                                                                </div>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend"><span class="input-group-text">observacion:</span></div><input class="form-control" type="text" v-model="observacionmodificar">
+                                                                    <div class="input-group-append"></div>
+                                                                </div>
+
+                                                            </form>
+                                                            <div id="paso2">
+                                                                <!-- <div class="btn-group" role="group"><button class="btn btn-secondary mt-4" type="button">Entradas</button><button class="btn btn-success mt-4" type="button">Platos</button><button class="btn btn-warning mt-4" type="button">Bebidas</button><button class="btn btn-danger mt-4"
+                                        type="button">Postres</button></div> -->
+                                                                <div class="table-responsive mt-3">
+                                                                    <table class="table" id="">
+                                                                        <caption></caption>
+                                                                        <thead>
+                                                                            <!-- <tr v-for="option in categoria"> -->
+                                                                            <th>Producto</th>
+                                                                            <th>Cantidad</th>
+                                                                            <th>precio/unidad</th>
+                                                                            <th>agregar</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                                <!--en el index cuando se da click mandar como parametro capturaravalor(index)  -->
+                                <!--v-show="elProd.idcategoria: agrega los productos  a la tabla segun elija categoria-->
+
+                                <tr class="list-group-item-action" v-for="(modificardetalle,index) in detalleordenmodificar ">
+                                    <td id="tgf">{{nombreProducto(modificardetalle.idproducto)}}</td>
+                                    <td id="texto" align="center"><input type="number" id="cantidad1" style="width:50px;height:15px" min="1" max="20" placeholder="{{modificardetalle.cantidad}}">
+                                    </td>
+                                    <td>{{ modificardetalle.preciounitario }}</td>
+                                    <td><a href="#" v-on:click.prevent="capturardatos(productoSelected);" id="btn"><i class="fa fa-edit" ></i></a></td>
+                                </tr>
+
+                            </tbody>
+                            </table>
+                            <button class="btn btn-warning" data-dismiss="modal">Cancelar</button>
+                            <button class="btn btn-primary">Guardar</button>
+                            </div>
+                            </div>
+
+
+
+
+
+                            </div>
+                            </div>
+                            </div>
+                            <div class="modal fade" role="dialog" tabindex="-1" id="cobrar">
+                                <div class="modal-dialog modal-sm" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Cobrar</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="form-group"><label>Total :</label></div>
+                                                <div class="form-group row"><label class="col-md-6">Ingrese efectivo:</label><input class="form-control col-md-6" type="text"></div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" id="btnCobrar" type="button" data-dismiss="modal">Save</button></div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+
+
+
+
+
+
+                            <!-- finaliza modal -->
+
+
+
+
+
+
+
+                            <button class="btn btn-outline-danger" v-on:click="agregar();" data-toggle="tooltip" data-placement="bottom" style="margin-left: 5px;" type="submit" title="agregar productos"><i class="fa fa-plus" style="font-size: 15px;"  >
+                                </i></button>
+
+                            <div class="modal fade" id="agregarproducto" tabindex="-1">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="agregarproductos" text-align: center>Agregar Producto</h5><button type="button" class="close" data-dismiss="modal"><span>×</span></button></div>
+                                        <div class="modal-body">
+                                            <!-- <h8>Ingrese su usuario y password </h8><br>
+                        <h8> asignado por favor</h8> -->
+
+                                            <!-- </div>
                     <div class="modal-body">
                     <input type="text" class="form-control" placeholder="usuario" />
                     
                     </div>
                     <div class="modal-body"><input type="text" class="form-control" placeholder="Password" /></div>
-                    <div class="modal-footer">
-                       
-                                   
-                        
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button><a href="nuevaOrden.html" class="btn btn-primary">iniciar</a></div>
+                    <div class="modal-footer"> -->
+                                            <div id="paso2">
+                                                <!--agregar productos tambien-->
+
+
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <ul class="nav nav-tabs">
+                                                            <li class="nav-item" href="#" v-on:click.prevent="categoriaSelected=Cate.id;" v-for="Cate in categorias">
+                                                                <a class="nav-link" href="#" v-on:click="categoriaSelected=Cate.id;" v-bind:class="{ 'font-weight-bold': categoriaSelected==Cate.id, 
+                                                 'text-dark': categoriaSelected==Cate.id }">{{ Cate.nombre }}</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="table-responsive ">
+                                                    <table class="table">
+                                                        <caption></caption>
+                                                        <thead>
+                                                            <!-- <tr v-for="option in categoria"> -->
+                                                            <th>Producto</th>
+                                                            <th>Cantidad</th>
+                                                            <th>precio/unidad</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <!--v-show="elProd.idcategoria: agrega los productos  a la tabla segun elija categoria-->
+
+                                                            <tr class="list-group-item-action" v-for="(elProd) in productos " v-show="elProd.idcategoria==categoriaSelected">
+                                                                <td>{{ elProd.nombre}}</td>
+                                                                <td><button class="btn btn-danger" type="button"><i class="fa fa-minus-circle"></i>
+                                                          </button ><span class="badge badge-primary ml-3">1</span><button class="btn btn-dark ml-3" type="button">
+                                                              <i class="fa fa-plus-circle"></i></button></td>
+                                                                <td>$ {{ elProd.precio }}</td>
+                                                            </tr>
+
+                                                        </tbody>
+                                                    </table>
+
+                                                </div>
+
+
+
+                                                <div>
+                                                    <button class="btn btn-outline-primary" type="button">Agregar</button>
+                                                    <button type="button" class="btn btn-outline-danger" onclick="location.href='dashboard.html'">cancelar </button>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+                                        </tr>
+
+                        </tbody>
+                    </table>
+
+
+
+                    </div>
+
+
+
+                    </div>
+                    <div></div>
+                    </div>
+
+
+
+
                 </div>
-            </div>
-        </div>
-    <div class="form-group pull-right col-lg-4"><input type="text" class="search form-control" placeholder="buscar cuenta.." /></div><span class="counter pull-right"></span>
-    <div>
-        <div class="table-responsive table-bordered table table-hover table-bordered results">
-            <table class="table table-bordered table-hover">
-                <thead class="bill-header cs">
-                    <tr>
-                        <th id="trs-hd" >IdOrden</th>
-                        <th id="trs-hd" >mesa</th>
-                        <th id="trs-hd" >mesero</th>
-                        <th id="trs-hd" >cliente</th>
-                        <th id="trs-hd" >total</th>
-                        <th id="trs-hd" >Estado</th>
-                        <th id="trs-hd" >llevar </th>
-                        <th id="trs-hd" >tiempo preparado</th>
-                        <th id="trs-hd">Preparado</th>
-                        <th id="trs-hd" >Tiempo Rapido</th>
-                        <th id="trs-hd">Tipo</th>
-                        <th id="trs-hd">Acciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                      <td>01</td>
-                        <td>09</td>
-                        <td>illinois</td>
-                        <td>cat</td>
-                        <td>$5.00</td>
-                        <td>activo</td>
-                        <td>No</td>
-                        <td><button class="btn btn-outline-success" style="  margin-left: 5px;
-" type="submit"><i style="  font-size: 15px;
-">30 min</i></button></td>
-                        <td>si</td>
-                        <td>  <button class="btn btn-outline-success" style="  margin-left: 5px;
-" type="submit"><i style="  font-size: 15px;
-">20 min </i></button>
-                        
-                        </td>
-                        <td>comer aqui</td>
-                        <td><button class="btn btn-outline-success" style="margin-left: 5px;" type="submit"><i class="fa fa-money" style="font-size: 15px;"></i></button><button class="btn btn-outline-success" style="margin-left: 5px;" type="submit"><i class="fa fa-print" style="font-size: 15px;"></i></button>
-                            <button class="btn btn-outline-danger" style="margin-left: 5px;" type="submit"><i class="fa fa-undo" style="font-size: 15px;">
-                                </i></button>
-                            <button class="btn btn-outline-danger" style="margin-left: 5px;" type="submit"><i class="fa fa-plus" style="font-size: 15px;">
-                                </i></button>
-                        
-                    </tr>
-                    <tr>
-                        <td>02</td>
-                        <td>02</td>
-                        <td>huston</td>
-                        <td>texas</td>
-                        <td>$10.00</td>
-                        <td>activo</td>
-                        <td>no</td>
-                        <td><button class="btn btn-outline-success" style="  margin-left: 5px;
-" type="submit"><i style="  font-size: 15px;
-">25 min</i></button></td>
-                        <td>si</td>
-                        <td><button class="btn btn-outline-success" style="  margin-left: 5px;
-" type="submit"><i style="  font-size: 15px;
-">20 min </i></button></td>
-                        <td>comer aqui
-                        </td>
-                        <td><button class="btn btn-outline-success" style="margin-left: 5px;" type="submit"><i class="fa fa-money" style="font-size: 15px;"></i></button><button class="btn btn-outline-success" style="margin-left: 5px;" type="submit"><i class="fa fa-print" style="font-size: 15px;"></i></button>
-                            <button class="btn btn-outline-danger" style="margin-left: 5px;" type="submit"><i class="fa fa-undo" style="font-size: 15px;">
-                                </i></button>
-                            <button class="btn btn-outline-danger" style="margin-left: 5px;" type="submit"><i class="fa fa-plus" style="font-size: 15px;">
-                                </i></button>
-                    </tr>
-                </tbody>
-            </table>
-            
-            
-            
-        </div>
-        
-      
-        
-    </div>
-    <div></div>
-</div>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+
+
+
 </body>
+<script src="assets/js/jquery.min.js"></script>
+
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/script.min.js"></script>
+<script src="./../vue/vue.js"></script>
+<script src="./../axios/axios.min.js"></script>
+<script src="./../archivos_vue/dashboard.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.3.5"></script>
 
 </html>

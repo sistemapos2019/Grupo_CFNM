@@ -11,7 +11,7 @@ var vueprod = new Vue({
         productoSelected: 0,
         categoriaSelected: 1,
         productos: [],
-        categorias:[],
+        categorias: [],
         nuevoProducto: {
             "id": 0,
             "nombre": "",
@@ -24,6 +24,12 @@ var vueprod = new Vue({
         },
     },
     methods: {
+        fechahoy: function() {
+            var f = new Date();
+            (f.getDate() + "-" + (f.getMonth() + 1) + "-" + f.getFullYear());
+            return f;
+
+        },
         mostrarAlerta: function(titu, msg) {
             this.alerta.titulo = titu;
             this.alerta.mensaje = msg;
@@ -54,9 +60,9 @@ var vueprod = new Vue({
 
 
         },
-         nombreCategoria:function(idCat){
-            return this.categorias.find(function(cat){
-                return cat.id==idCat
+        nombreCategoria: function(idCat) {
+            return this.categorias.find(function(cat) {
+                return cat.id == idCat
             }).nombre;
         },
         orderBy: function(campo) {
@@ -84,12 +90,12 @@ var vueprod = new Vue({
             }
         },
         cargarDatos: function() {
-        	 //cargando las categorias
+            //cargando las categorias
             axios.get('http://localhost:3000/api/Categoria')
-                .then(function (res) {
-                    vueprod.categorias=res.data;
+                .then(function(res) {
+                    vueprod.categorias = res.data;
                 })
-                .catch(function (error) {
+                .catch(function(error) {
                     // handle error
                     console.log(error);
                 });
@@ -124,6 +130,17 @@ var vueprod = new Vue({
                     vueprod.cargarDatos();
                     vueprod.mostrarAlerta("Producto Agregado", "Se agregó el nuevo producto");
                 })
+            bitacoraguardar = {
+
+                "idUsuario": 1,
+                "fecha": this.fechahoy(),
+                "suceso": "se agrego un producto nuevo"
+            }
+            axios.post('http://localhost:3000/api/bitacoras', bitacoraguardar)
+                .then(function(res) {
+
+
+                })
                 .catch(function(error) {
                     // handle error
                     vueprod.mostrarAlerta("Error", error);
@@ -136,6 +153,17 @@ var vueprod = new Vue({
                 .then(function(res) {
                     console.log("UPDATED Producto");
                     vueprod.mostrarAlerta("Producto Modificado", "Se modifico el producto satisfactoriamente");
+
+                })
+            bitacoraguardar = {
+
+                "idUsuario": 1,
+                "fecha": this.fechahoy(),
+                "suceso": "se modifico un producto"
+            }
+            axios.post('http://localhost:3000/api/bitacoras', bitacoraguardar)
+                .then(function(res) {
+
 
                 })
                 .catch(function(error) {
@@ -152,6 +180,17 @@ var vueprod = new Vue({
                     console.log("DELETE Producto");
                     vueprod.cargarDatos();
                     vueprod.mostrarAlerta("Producto Eliminado", "el producto se eliminó de la base de datos con exito");
+
+                })
+            bitacoraguardar = {
+
+                "idUsuario": 1,
+                "fecha": this.fechahoy(),
+                "suceso": "se elimino un producto nuevo"
+            }
+            axios.post('http://localhost:3000/api/bitacoras', bitacoraguardar)
+                .then(function(res) {
+
 
                 })
                 .catch(function(error) {

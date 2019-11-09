@@ -1,5 +1,3 @@
-
-
 var vueusu = new Vue({
 
 
@@ -27,10 +25,16 @@ var vueusu = new Vue({
         },
     },
 
-   
+
 
 
     methods: {
+        fechahoy: function() {
+            var f = new Date();
+            (f.getDate() + "-" + (f.getMonth() + 1) + "-" + f.getFullYear());
+            return f;
+
+        },
         mostrarAlerta: function(titu, msg) {
             this.alerta.titulo = titu;
             this.alerta.mensaje = msg;
@@ -117,6 +121,17 @@ var vueusu = new Vue({
                     vueusu.cargarDatos();
                     vueusu.mostrarAlerta("Usuario Agregado", "Se agregó el nuevo usuario");
                 })
+            bitacoraguardar = {
+
+                "idUsuario": 1,
+                "fecha": this.fechahoy(),
+                "suceso": "se agrego un nuevo usuario"
+            }
+            axios.post('http://localhost:3000/api/bitacoras', bitacoraguardar)
+                .then(function(res) {
+
+
+                })
                 .catch(function(error) {
                     // handle error
                     vueusu.mostrarAlerta("Error", error);
@@ -129,6 +144,17 @@ var vueusu = new Vue({
                 .then(function(res) {
                     console.log("UPDATED Usuario");
                     vueusu.mostrarAlerta("usuario Modificado", "Se modifico el usuario satisfactoriamente");
+
+                })
+            bitacoraguardar = {
+
+                "idUsuario": 1,
+                "fecha": this.fechahoy(),
+                "suceso": "se modifico un usuario"
+            }
+            axios.post('http://localhost:3000/api/bitacoras', bitacoraguardar)
+                .then(function(res) {
+
 
                 })
                 .catch(function(error) {
@@ -147,6 +173,17 @@ var vueusu = new Vue({
                     vueusu.mostrarAlerta("usuario Eliminada", "el usuario se eliminó de la base de datos con exito");
 
                 })
+            bitacoraguardar = {
+
+                "idUsuario": 1,
+                "fecha": this.fechahoy(),
+                "suceso": "se elimino usuario"
+            }
+            axios.post('http://localhost:3000/api/bitacoras', bitacoraguardar)
+                .then(function(res) {
+
+
+                })
                 .catch(function(error) {
                     // handle error
                     vueusu.mostrarAlerta("Error:", error);
@@ -162,6 +199,3 @@ var vueusu = new Vue({
     },
 
 });
-
-
-

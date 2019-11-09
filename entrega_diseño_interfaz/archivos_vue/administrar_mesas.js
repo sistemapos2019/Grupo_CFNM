@@ -16,6 +16,12 @@ var vuemesa = new Vue({
         },
     },
     methods: {
+        fechahoy: function() {
+            var f = new Date();
+            (f.getDate() + "-" + (f.getMonth() + 1) + "-" + f.getFullYear());
+            return f;
+
+        },
         mostrarAlerta: function(titu, msg) {
             this.alerta.titulo = titu;
             this.alerta.mensaje = msg;
@@ -98,6 +104,17 @@ var vuemesa = new Vue({
                     vuemesa.cargarDatos();
                     vuemesa.mostrarAlerta("Mesa Agregada", "Se agregó la nueva Mesa");
                 })
+            bitacoraguardar = {
+
+                "idUsuario": 1,
+                "fecha": this.fechahoy(),
+                "suceso": "se agrego una mesa nueva"
+            }
+            axios.post('http://localhost:3000/api/bitacoras', bitacoraguardar)
+                .then(function(res) {
+
+
+                })
                 .catch(function(error) {
                     // handle error
                     vuemesa.mostrarAlerta("Error", error);
@@ -110,6 +127,17 @@ var vuemesa = new Vue({
                 .then(function(res) {
                     console.log("UPDATED mesa");
                     vuemesa.mostrarAlerta("Mesa Modificada", "Se modifico la mesa satisfactoriamente");
+
+                })
+            bitacoraguardar = {
+
+                "idUsuario": 1,
+                "fecha": this.fechahoy(),
+                "suceso": "se modifico una mesa "
+            }
+            axios.post('http://localhost:3000/api/bitacoras', bitacoraguardar)
+                .then(function(res) {
+
 
                 })
                 .catch(function(error) {
@@ -126,6 +154,17 @@ var vuemesa = new Vue({
                     console.log("DELETE MESA");
                     vuemesa.cargarDatos();
                     vuemesa.mostrarAlerta("mesa Eliminada", "La mesa se eliminó de la base de datos con exito");
+
+                })
+            bitacoraguardar = {
+
+                "idUsuario": 1,
+                "fecha": this.fechahoy(),
+                "suceso": "se elimino una mesa"
+            }
+            axios.post('http://localhost:3000/api/bitacoras', bitacoraguardar)
+                .then(function(res) {
+
 
                 })
                 .catch(function(error) {
