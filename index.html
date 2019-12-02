@@ -1,0 +1,710 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <link rel="shortcut icon" href="./phpThumb_generated_thumbnailico.ico">
+    <title>Sistema POS 2019</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+
+<body class="is-preload">
+
+
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header" class="alt">
+            <span class="logo"><img src="images/images.png" alt="" /></span>
+            <h1>SISTEMA POS RESTBAR</h1>
+            <p>RESTBAR Un sistema para Bar y Restaurante<br />
+                <p>UN SISTEMA DE VENTAS REALIZADO POR: <br />
+                    <a href="https://github.com/Carlos222Cuellar">Carlos Cuellar</a>,
+                    <a href="https://github.com/mamasota">Karen Flores</a>,
+                    <a href="">Willian Martinez</a> y
+                    <a href="https://github.com/NH13003-PRN335">Daniel Nerio</a>.</p>
+
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul>
+                <li><a href="#intro" class="active"> Introdución</a></li>
+                <li><a href="#caracteristicas"> Caracteristicas</a></li>
+                <li><a href="#instalacion"> Instalación</a></li>
+                <li><a href="#manual"> Manual</a></li>
+                <li><a href="#casoDeExito"> Caso de Éxito</a></li>
+                <li><a href="#footer"> Pie de pagina</a></li>
+
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Introduction -->
+            <section id="intro" class="main">
+                <div class="spotlight">
+                    <div class="content">
+                        <header class="major">
+                            <h2 style="color: rgb(108, 0, 158); font-family: Verdana;">Introducción:<br> Sistema POS</h2>
+                        </header>
+                        <p> <strong>Sistema POS</strong>, es un sistema creado para facilitar la administración de un negocio dedicado a la venta de bebidas, comidas, y cualquier otro producto de consumo al cliente. Especialmente creado para un Restaurante
+                            y Bar pero puede adaptarse a cualquier tipo de negocio que ofrezca servicios de comida rápida para (<i>clientes</i>) que consumen en su local o incluso si tienen servicio par a llevar. </p>
+
+                        <p></p>
+
+
+
+
+                        <!--<ul class="actions">
+											<li><a href="generic.html" class="button">Leer Mas...</a></li>
+										</ul>-->
+                    </div>
+                    <span class="image"><img src="images/dashboardprincipal.jpg" alt="" /></span>
+                </div>
+            </section>
+
+            <!--  CSS PARA EL MODAL-->
+
+            <style>
+                .modalDialog {
+                    position: fixed;
+                    font-family: Arial, Helvetica, sans-serif;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background: rgba(0, 0, 0, 0.8);
+                    z-index: 99999;
+                    opacity: 0;
+                    -webkit-transition: opacity 400ms ease-in;
+                    -moz-transition: opacity 400ms ease-in;
+                    transition: opacity 400ms ease-in;
+                    pointer-events: none;
+                }
+                
+                .modalDialog:target {
+                    opacity: 1;
+                    pointer-events: auto;
+                }
+                
+                .modalDialog>div {
+                    width: 700px;
+                    height: 440px;
+                    position: relative;
+                    margin: 10% auto;
+                    padding: 5px 20px 13px 20px;
+                    border-radius: 10px;
+                    background: #fff;
+                    background: -moz-linear-gradient(#fff, #999);
+                    background: -webkit-linear-gradient(#fff, #999);
+                    background: -o-linear-gradient(#fff, #999);
+                    -webkit-transition: opacity 400ms ease-in;
+                    -moz-transition: opacity 400ms ease-in;
+                    transition: opacity 400ms ease-in;
+                }
+                
+                .close {
+                    background: #606061;
+                    color: #FFFFFF;
+                    line-height: 25px;
+                    position: absolute;
+                    right: -12px;
+                    text-align: center;
+                    top: -10px;
+                    width: 24px;
+                    text-decoration: none;
+                    font-weight: bold;
+                    -webkit-border-radius: 12px;
+                    -moz-border-radius: 12px;
+                    border-radius: 12px;
+                    -moz-box-shadow: 1px 1px 3px #000;
+                    -webkit-box-shadow: 1px 1px 3px #000;
+                    box-shadow: 1px 1px 3px #000;
+                }
+                
+                .close:hover {
+                    background: #00d9ff;
+                }
+            </style>
+
+
+            <!-- Caracteristicas -->
+            <section id="caracteristicas" class="main special">
+                <header class="major">
+                    <h2 style="color: rgb(108, 0, 158); font-family: Verdana;">Características:<br> Sistema POS RESTBAR</h2>
+                </header>
+                <ul class="features">
+                    <li>
+
+
+                        <span class="logo"><img src="images/logeo.jpg" width="200" height="130"/></span>
+                        <h3>Logueo de Usuarios</h3>
+                        <p>El sistema muestra la pantalla principal para el logueo de usuarios para poder acceder al sistema lo cual brinda una seguridad al administrador ya que solo el tendra acceso al sistema. <br><br>
+                        </p>
+
+                        <!--  ABRIREMOS LA IMAGEN DE LOGIN-->
+                        <a href="#openModal1">Abrir imagen</a>
+
+                        <div id="openModal1" class="modalDialog">
+                            <div>
+                                <a href="#close" title="Close" class="close">X</a>
+                                <h2>Logueo de Usuarios</h2>
+                                <span class="logo"><img src="images/logeo.jpg" width="640"	height="360">
+								</div>
+							</div>
+					</li>
+					<li>
+						<span class="logo"><img src="images/dashboardprincipal.jpg" width="200" height="130"/></span>
+                                <h3>Dashboard de ordenes activas</h3>
+                                <p>Nos muestra la pantalla del Dashboard principal de todas las ordenes activas entre las opciones que esta pantalla nos ofrece esta, la de crear orden, ampliar orden, modificar orden, cobrar orden imprimir ticket.</p>
+                                <!--  ABRIREMOS LA IMAGEN DE ORDENES ACTIVAS-->
+                                <a href="#openModal2">Abrir imagen</a>
+
+                                <div id="openModal2" class="modalDialog">
+                                    <div>
+                                        <a href="#close" title="Close" class="close">X</a>
+                                        <h2>Dashboard de ordenes activas</h2>
+                                        <span class="logo"><img src="images/dashboardprincipal.jpg" width="640"	height="360">
+															</div>
+														</div>
+					</li>
+					<li>
+						<span class="logo"><img src="images/crearorden.jpg" width="200" height="130"/></span>
+                                        <h3>Crear Orden</h3>
+                                        <p>Permite crear una nueva orden, donde se nos muestra tres pasos donde el <b>paso 1</b> es datos generales de la orden,<b>paso 2</b> agregar productos a la orden y <b>paso 3</b> muestra un detalle de la orden</p>
+
+                                        <!--  ABRIREMOS LA IMAGEN DE CREAR ORDEN-->
+                                        <a href="#openModal3">Abrir imagen</a>
+
+                                        <div id="openModal3" class="modalDialog">
+                                            <div>
+                                                <a href="#close" title="Close" class="close">X</a>
+                                                <h2>Crear Orden</h2>
+                                                <span class="logo"><img src="images/crearorden.jpg" width="640"	height="360">
+								</div>
+							</div>
+					</li>
+					<li>
+						<span class="logo"><img src="images/agregarmas.jpg" width="200" height="130"/></span>
+                                                <h3>Ampliar Orden</h3>
+                                                <p>Tenemos la opcion de agregar mas productos a la orden la pantalla sera muy similar a la de agregar orden solo que en esta no abra el ingreso de datos generales ya que es una orden existente.</p>
+                                                <!--  ABRIREMOS LA IMAGEN DE AMPLIAR ORDEN-->
+                                                <a href="#openModal4">Abrir imagen</a>
+
+                                                <div id="openModal4" class="modalDialog">
+                                                    <div>
+                                                        <a href="#close" title="Close" class="close">X</a>
+                                                        <h2>Ampliar Orden</h2>
+                                                        <span class="logo"><img src="images/agregarmas.jpg" width="640"	height="360">
+								</div>
+							</div>
+					</li>
+					<li>
+						<span class="logo"><img src="images/modificarorden.jpg" width="200" height="130"/></span>
+                                                        <h3>Modificar Orden</h3>
+                                                        <p>Podemos modificar ordenes pero solo permite quitar o aumentar cantidad de productos, si se quiere agregar nuevos productos a la orden se debe realizar desde agregar mas productos a la orden. </p>
+
+                                                        <!--  ABRIREMOS LA IMAGEN MODIFICAR ORDEN-->
+                                                        <a href="#openModal5">Abrir imagen</a>
+
+                                                        <div id="openModal5" class="modalDialog">
+                                                            <div>
+                                                                <a href="#close" title="Close" class="close">X</a>
+                                                                <h2>Modificar Orden</h2>
+                                                                <span class="logo"><img src="images/modificarorden.jpg" width="640"	height="360">
+								</div>
+							</div>
+					</li>
+					<li>
+						<span class="logo"><img src="images/cobrarorden.jpg" width="200" height="130"/></span>
+                                                                <h3>Cobrar Orden</h3>
+                                                                <p>Permite cobrar cualquier orden activa en nel dashboard que se seleccione.<br><br><br><br></p>
+
+                                                                <!--  ABRIREMOS LA IMAGEN COBRAR ORDEN-->
+                                                                <a href="#openModal6">Abrir imagen</a>
+
+                                                                <div id="openModal6" class="modalDialog">
+                                                                    <div>
+                                                                        <a href="#close" title="Close" class="close">X</a>
+                                                                        <h2>Cobrar Orden</h2>
+                                                                        <span class="logo"><img src="images/cobrarorden.jpg" width="640"	height="360">
+								</div>
+							</div>
+					</li>
+					
+					
+					
+				</ul>
+				<!--<footer class="major">
+									<ul class="actions special">
+										<li><a href="generic.html" class="button">Learn More</a></li>
+									</ul>
+								</footer>-->
+			</section>
+
+			<!-- Instalación -->
+			<section id="instalacion" class="main special">
+				<header class="major">
+						<h2 style="color: rgb(108, 0, 158); font-family: Verdana;">Instalación:<br> Sistema POS RESTBAR</h2>
+
+<h1> <strong>1. Instalaremos MYSQL en nuestra computadora</strong> </h1>
+
+				</header>
+
+				<p align="justify">
+					MySQL es un sistema de gestión de bases de datos relacional desarrollado bajo licencia dual:
+					Licencia pública general/Licencia comercial por Oracle Corporation y está considerada como la base de datos
+					de código abierto más popular del mundo, y una de las más populares en general junto a Oracle y Microsoft SQL Server,
+					sobre todo para entornos de desarrollo web.
+				</p>
+				<p align="justify">
+					MySQL es una base de datos muy rápida en la lectura cuando utiliza el motor no transaccional MyISAM, pero puede
+					provocar problemas de integridad en entornos de alta concurrencia en la modificación. En aplicaciones web hay baja
+					concurrencia en la modificación de datos y en cambio el entorno es intensivo en lectura de datos, lo que hace a MySQL
+					ideal para este tipo de aplicaciones. Sea cual sea el entorno en el que va a utilizar MySQL, es importante monitorizar
+					de antemano el rendimiento para detectar y corregir errores tanto de SQL como de programación.
+				</P>
+				<br>
+
+				<button type="button"  class="btn btn-success btn-sm"><i class="fas fa-download"><a href="programas\mariadb-10.2.13-winx64.msi"> Descargar MySql</a></i></button>
+
+
+				<br><br>
+
+
+<h1> <strong>2. Instalaremos Node.js </strong> </h1>
+				<br>
+				<p align="justify">
+
+					Node.js es un entorno en tiempo de ejecución multiplataforma, de código abierto, para la capa del servidor (pero no limitándose a ello)
+					basado en el lenguaje de programación ECMAScript, asíncrono,
+					con I/O de datos en una arquitectura orientada a eventos y basado en el motor V8 de Google. Fue creado con el enfoque de ser útil en
+					la creación de programas de red altamente escalables, como por ejemplo, servidores web.
+				</p>
+				<br>
+
+				<button type="button"  class="btn btn-success btn-sm"><i class="fas fa-download"><a href="programas\node-v8.11.3-x64.msi"> Descargar Node</a></i></button>
+
+
+				<br><br>
+				<h1> <strong>3. Instalaremos Loopback 3 </strong> </h1>
+				<br>
+				<p align="justify">
+
+						LoopBack es un framework para  Node.js altamente extensible y de código abierto que te permite:
+						Cree API REST dinámicas, con poco o ningún codigo.
+						El soporte para base datos es bastante amplio, podemos trabajar con 
+						Oracle
+						MySQL
+						PostgreSQL
+						MS SQL Server
+						MongoDB
+						Incorporar relaciones de modelo y controles de acceso para API complejas.
+						Servicios integrados de inserción, geolocalización y archivos para aplicaciones móviles.
+						Crear fácilmente aplicaciones de cliente con Android, iOS y JavaScript SDK.
+				</p>
+				<br>
+
+				<button type="button"  class="btn btn-success btn-sm"><i class=""><a href="https://loopback.io/doc/en/lb3/Installing-on-Windows.html"> Instalar loopback 3 en Windows</a></i></button>
+
+
+				<br><br>
+			
+
+
+				
+
+				
+
+
+				
+
+				
+                <br>
+                <br>
+                <p align="justify">
+                    Es para poder utilizar los servicios de la base de datos.
+                    <br>
+
+                </p>
+                <button type="button"  class="btn btn-success btn-sm"><i class="fas fa-download"><a href="programas\db_pos.sql"> Descargar base de datos POS</a></i></button>
+                <br><br>
+
+                <h1> <strong>4. Instalar la app ssfree.exe</strong> </h1>
+				<br>
+				<br>
+				<p align="justify">
+					Es para poder utilizar los servicios de node.
+					<br>
+
+				</p>
+				<button type="button"  class="btn btn-success btn-sm"><i class="fas fa-download"><a href="programas\ssfree.exe"> Descargar ssfree.exe</a></i></button>
+
+				<h1> <strong>5. descargar Proyecto</strong> </h1>
+				<br>
+				<br>
+				<p align="justify" >
+					Descargar el siguiente proyecto y descomprimirlo en el escritorio. Utilizar la aplicacion ssfree.exe y luego abrir cada archivo .sh y darle play para lenvantar los servicios de la aplicacion
+					luego abrir el navegador con la siguiente direccion url: " http://localhost:3000/dashboardprincipal.html " lo mas importante es que si quieren tener activo su sistema no deben apagar el servidor ssfree.exe ni las consolas de GitHub para que el sistema funcione correctamente.
+					<br>
+
+				</p>
+				<button type="button"  class="btn btn-success btn-sm"><i class="fas fa-download"><a href="programas\Proyecto.zip"> Descargar Proyecto</a></i></button>
+
+
+			</section>
+
+			<!-- Manual -->
+			<section id="manual" class="main special">
+				<header class="major">
+						<h2 style="color: rgb(108, 0, 158); font-family: Verdana;">Manual:<br> Sistema POS RESTBAR</h2>
+
+					<p align="justify">En esta sección se presenta un manual rapido de usuario con las principales
+						opciones para el uso del sistema POS RESTBAR,
+						mostrando los pasos necesarios para realizar operaciones en el sistema.</p>
+				</header>
+				<header class="">
+					<h2><strong>Configuración de Productos</strong></h2>
+					<p>Esta opción del sistema nos permite la configuración o resgistro de los productos que estaran
+						disponibles en el negocio,
+						asi como tambien la edición y eliminación de estos.
+					</p>
+					<img src="imagesManual/productos.jpg" height="500" ; width="1000">
+					<strong>
+						<p align="left">Pasos a seguir.</p>
+					</strong>
+					<ol align="left">
+						<li>El Id del producto es autogenerico por lo que no se necesita asignarlo manualmente.</li>
+						<li>En el campo Nombre asignar el nombre del producto a registrar.</li>
+						<li>En el campo Precio se asigna el precio del producto a registrar.</li>
+						<li>Seleccionar una categoria adecuada disponible para el producto a registrar.</li>
+						<li>Dar click en el boton Guardar para que el producto sea guardado en la base de datos, el
+							producto
+							registrado se mostrara en la tabla de la derecha con los campos Id, Poducto, Precio y la
+							Categoria
+							a la cual pertenece.</li>
+						<li>Modificar Productos
+							<img src="imagesManual/productosagregar.jpg" height="500" ; width="1000">
+							En este paso se debe seleccionar un producto de la tabla anterior y luego dar click en el
+							boton Editar
+							nos aparecera una ventana modal llamada modificar producto, esta ventana tendra todos los
+							campos cargados
+							con los datos correspondientes para poder ser modificados, para guardar cambios en caso que
+							se haya modificado
+							un campo dar click en el boton Guardar caso contrario click en Cancelar.</li>
+						<li>Para eliminar un producto o productos, seleccionarlos de la tabla donde se ven reflejados el
+							registro de estos
+							luego dar click en el boton eliminar.
+						</li>
+					</ol>
+
+				</header>
+
+				<header class="">
+					<h2><strong>Consola Principal</strong></h2>
+					<p>A continuación se describira las caracteristicas del dashboard principal y el dashboard para
+						llevar, estas son las pantallas
+						o vistas principales del sistema para interactuar con las ordenes solicitadas.
+					</p>
+					<strong>
+						<p>Dashboard Principal</p>
+					</strong>
+					<img src="images/dashboardprincipal.jpg" height="500" ; width="1000">
+					<p align="justify">Esta pantalla principal nos permite acceder a una serie de opciones que nos
+						permite la interaccion con el sistema para realizar porcesos
+						como: crear una orden, ampliar ordenes, modificar ordenes, cobrar ordenes, impresion de la
+						factura del cliente; proporciona tambien un
+						buscador de ordenes activas esto es util en caso que se tengan varias ordes acitivas listadas,
+						como se observa el sistema es capaz
+						medir el tiempo que ha transcurrido desde que se solicito la orden esto es importante por que
+						esto permite llevar el control del tiempo
+						de espera de los clientes de esta forma se busca brindar un mejor servicio.
+					</p>
+
+					<strong>
+						<p>Dashboard para Llevar</p>
+					</strong>
+					<img src="imagesManual/dashllevar.jpg" height="500" ; width="1000">
+					<p align="justify">En esta pantalla se listan todas las ordenes que ha sido solicitadas por los
+						clientes, estas como tal son para llevar
+						lo que significa que no hay mesas en uso en este tipo de orden; de igual forma que el dashboard
+						principal esta nos
+						permite buscar ordenes para llevar en caso que se tengan varias de estas listadas y tambien nos
+						muestra el tiempo
+						que ha transcurrido desde que se solicito la orden.</p>
+				</header>
+
+				<header class="">
+					<h2><strong>Crear Orden</strong></h2>
+					<p>Esta opción del sistema nos permite la creacion de ordenes de una forma muy facil en la cual se muestra un modal con tres pasos para gregar datos generales,agregar productos y detalle orden para los
+						usuarios registrados.
+					</p>
+					<img src="imagesManual/crearordenpas1.jpg" height="500" ; width="1000">
+					<img src="imagesManual/crearordenpas2.jpg" height="500" ; width="1000">
+					<img src="imagesManual/crearordenpas3.jpg" height="500" ; width="1000">
+					<strong>
+						<p align="left">Pasos a seguir.</p>
+					</strong>
+					<ol align="left">
+						<li>En el dashboard principal dar click en el boton Crear Orden, nos motrara la patalla Crear
+							Nueva Orden</li>
+						<li>El Id de la orden es autogenerico por lo que no se necesita asignarlo manualmente</li>
+						<li>En el campo Mesa seleccionar la mesa que el cliente eligio, la seleccion de esta depende del
+							tipo de orden solicitada</li>
+						<li>En el campo Cliente se asigna el nombre del cliente a atender </li>
+						<li>El campo Mesero se autocompleta con el registro que este hace a la hora de crear una orden
+						</li>
+						<li>Seleccionar el tipo de orden a crear puede ser para comer o para llevar</li>
+						<li>Seleccionar de las categorias disponibles los productos que los clientes piden en sus
+							ordenes</li>
+						<p>En la tabla donde se listan los productos seleccionados se puede observar algunos campos que
+							describen a los productos
+							los campos disminuir y aumentar permiten quitar o agregar cantidad de un mismo producto </p>
+						<li>Para que la orden se procese dar click en el boton Guardar, seguidamente se mostrara una
+							ventana modal con el resumen de
+							la orden creada la cual detalla el numero de la orden, el mesero que atendio la orden, el
+							cliente, el producto, la cantidad, el
+							precio unitario y el subtotal de la orden
+						</li>
+						<li>Para confirmar definitivamente la orden creada dar click en el boton GUardar, esta se
+							agregara a la vista de ordenes activas</li>
+						
+					</ol>
+				</header>
+
+				<header class="">
+					<h2><strong>Agregar productos a una orden</strong></h2>
+					<p>Esta opción del sistema nos permite agregar o ampliar una orden existente con nuevos productos
+						solicitados por los clientes
+					</p>
+					<img src="imagesManual/agregarmas.jpg" height="500" ; width="1000">
+					<img src="imagesManual/agregarmas1.jpg" height="500" ; width="1000">
+					<strong>
+						<p align="left">Pasos a seguir.</p>
+					</strong>
+					<ol align="left">
+						<li>Para acceder a esta funcionalidad la orden debe ser seleccionada desde el dashboard
+							principal, luego dar clik en el boton
+							agregar mas productos a orden, nos cargara la pantalla Ampliar orden, los campos de los datos de la orden
+							aparacen ya llenos
+						</li>
+						<li>Seleccionar de las categorias disponibles los nuevos productos a asignar a una orden ya
+							existente, de igual forma se puede
+							disminuir o aumentar cantidad de productos, permite visualizar el nuevo producto que se
+							agregara con su precio unitario
+						</li>
+						<li>Para que la asignación de los nuevos productos se procesen dar click en el boton Aceptar,
+							seguidamente se mostrara una ventana modal con el resumen de
+							los nuevos productos asignados a la orden ya existente
+						</li>
+					
+						<li>Para confirmar definitivamente la asignación de los nuevos productos dar click en el boton
+							Agregar, estos productos se asignaran a la orden ya existente</li>
+
+					</ol>
+				</header>
+
+				<header class="">
+					<h2><strong>Cobrar orden</strong></h2>
+					<p>Esta funcionalidad permite cobrar las ordenes que se realizaron
+					</p>
+					<img src="imagesManual/cobrarorden.jpg" height="500" ; width="1000">
+					<strong>
+						<p align="left">Pasos a seguir.</p>
+					</strong>
+					<ol align="left">
+						<li>La orden que se desea cobrar se debe seleccionar desde el dashboard principal</li>
+						<li>Luego dar click en el boton Cobrar orden, nos mostrara una ventana modal llamada Cobrar
+							Orden, esta ventana muestra los
+							campos Orden, SubTotal de la orden, la propina, el efectivo que adquirimos de los clientes y
+							el campo cambio este muestra
+							el cambio que se le dara al cliente si existe tal cambio
+						</li>
+						<li>Para que el cobro de la orden se confirme dar click en el boton Cobrar
+						</li>
+					</ol>
+				</header>
+
+				<header class="">
+					<h2><strong>Orden para Llevar</strong></h2>
+					<p>Esta funcionalidad se accede desde el dasboard principal la cual permite crear ordenes para comer
+						o llevar en este caso haremos enfasis en este tipo de orden
+						las ordenes para llevar se asigna al dashboard para llevar, es ahi donde se muestran todas las
+						ordenes creadas de este tipo
+					</p>
+					<img src="imagesManual/dashllevar.jpg" height="500" ; width="1000">
+					<strong>
+						<p align="left">Pasos a seguir.</p>
+					</strong>
+					<img src="imagesManual/crearordenllevar.jpg" height="500" ; width="1000">
+					<ol align="left">
+						<li>En el dashboard principal dar click en el boton Crear Orden, nos motrara la patalla Crear
+							Nueva Orden</li>
+						<li>El Id de la orden es autogenerico por lo que no se necesita asignarlo manualmente</li>
+						<li>En el campo mesa no se selecciona nada puesto que la orden es para llevar</li>
+						<li>En el campo Cliente se asigna el nombre del cliente a atender </li>
+						<li>El campo Mesero se autocompleta con el registro que este hace a la hora de crear una orden
+						</li>
+						<li>Seleccionar el tipo de orden a crear en este caso para llevar</li>
+						<li>Seleccionar de las categorias disponibles los productos que los clientes piden en sus
+							ordenes En la tabla donde
+							se listan los productos seleccionados se puede observar algunos campos que describen a los
+							productos
+							los campos disminuir y aumentar permiten quitar o agregar cantidad de un mismo producto</li>
+						<li>Para que la orden se procese dar click en el boton Aceptar, seguidamente se mostrara una
+							ventana modal con el resumen de
+							la orden creada la cual detalla el numero de la orden, el mesero que atendio la orden, el
+							cliente, el producto, la cantidad, el
+							precio unitario y el subtotal de la orden
+						</li>
+						<li>Para confirmar definitivamente la orden creada dar click en el boton Agregar, esta se
+							agregara a la vista de ordenes para llevar</li>
+					</ol>
+				</header>
+
+				<!--<footer class="major">
+										<ul class="actions special">
+											<li><a href="generic.html" class="button">Learn More</a></li>
+										</ul>
+									</footer>-->
+			</section>
+
+			<!-- Caso de Éxito -->
+			<section id="casoDeExito" class="main special">
+				<header class="major">
+						<h2 style="color: rgb(108, 0, 158); font-family: Verdana;">Caso de Éxito:<br> Sistema POS</h2>
+					<p>Implementación del Sistema POS</p>
+					<iframe width="560" height="315" src="videos\Diseno.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+						</header>
+
+				<p align="justify">
+					<P>Imagenes del Negocio donde se Implemento el sistema POS RESTBAR</P>
+					<img src="images/negocio1.jpg" height="500" ; width="400">
+					<img src="images/negocio2.jpg" height="500" ; width="400">
+					<img src="images/logonegocio.jpg" height="500" ; width="400">
+
+
+
+				</p>
+				<!--<footer class="major">
+										<ul class="actions special">
+											<li><a href="generic.html" class="button">Learn More</a></li>
+										</ul>
+									</footer>-->
+			</section>
+
+			<!-- Pie de Página
+							<section id="pieDePagina" class="main special">
+									<header class="major">
+										<h2> Pie de Página</h2>
+										<p>Falta completar esta parte</p>
+									</header>
+
+									<p align="justify">sss
+
+
+									</p>
+									<footer class="major">
+										<ul class="actions special">
+											<li><a href="generic.html" class="button">Learn More</a></li>
+										</ul>
+									</footer>
+								</section>
+							-->
+
+			<!-- Get Started -->
+
+
+
+
+				</footer>
+			</section>
+
+		</div>
+
+		<!-- Footer -->
+
+		<footer id="footer">
+			<section>
+				<h2><strong>Datos referidos al proyecto</strong></h2>
+				<ul>
+					<li><strong>Nombre del Sistema:</strong> Sistema POS RESTBAR</li>
+					<li><strong>Lugar de Desarollo:</strong> Santa Ana,El Salvador C.A</li>
+					<li><strong>Materia:</strong> Diseño de Sistemas II ciclo 2-2019</li>
+					<li><strong>Universidad:</strong> Universidad de El Salvador Facultad Multidisciplinaria de Occidente</li>
+
+
+				</ul>
+			</section>
+			<section>
+				<h2><strong>Nombres y contactos de los desarrolladores</strong></h2>
+				<dl class="alt">
+					<li><strong>Nombre:</strong> Carlos Mauricio Cuellar Rodriguez</li>
+					<li><strong>Email:</strong> <a href="#">CR14008@ues.edu.sv</a></li>
+					<ul class="icons" style="align-content: center">
+						<li><a href="https://www.facebook.com/cuellar.carlos222" target="_blank" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a>
+                    </li>
+                    <li><a href="https://github.com/Carlos222Cuellar" target="_blank" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+                </ul>
+                </dl>
+
+                <dl class="alt">
+                    <li><strong>Nombre:</strong> Karen Idalia Flores Quintanilla</li>
+                    <li><strong>Email:</strong>
+                        <a href="#"></a>
+                    </li>
+                    <ul class="icons" style="align-content: center">
+                        <li><a href="https://www.facebook.com/karensitaquintanilla" target="_blank" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
+                        <li><a href="https://github.com/mamasota" target="_blank" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+                    </ul>
+                </dl>
+                <dl class="alt">
+                    <li><strong>Nombre:</strong> Daniel Ernesto Nerio Hernandez</li>
+                    <li><strong>Email:</strong> <a href="#">NH13003@ues.edu.sv</a></li>
+                    <ul class="icons" style="align-content: center">
+                        <li><a href="https://www.facebook.com/neriohernandez" target="_blank" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
+                        <li><a href="https://github.com/NH13003-PRN335" target="_blank" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+                    </ul>
+                </dl>
+                <dl class="alt">
+                    <li><strong>Nombre:</strong> William Otoniel Martinez Matamoros</li>
+                    <li><strong>Email:</strong>
+                        <a href="#"></a>
+                    </li>
+                    <ul class="icons" style="align-content: center">
+                        <li><a href="https://www.facebook.com/wmartines1" target="_blank" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
+                        <li><a href="https://github.com/willix0981" target="_blank" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+                    </ul>
+                </dl>
+
+            </section>
+            <p class="copyright">&copy;<a href="https://html5up.net">Universidad de El Salvador 2019</a>.</p>
+            </footer>
+
+            </div>
+
+            <!-- Scripts -->
+            <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/jquery.scrollex.min.js"></script>
+            <script src="assets/js/jquery.scrolly.min.js"></script>
+            <script src="assets/js/browser.min.js"></script>
+            <script src="assets/js/breakpoints.min.js"></script>
+            <script src="assets/js/util.js"></script>
+            <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
