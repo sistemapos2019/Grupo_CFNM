@@ -7,6 +7,10 @@ Entregas  del sistema para la materia diseño de sistemas 2 uesfmocc-2019
 - Martinez Matamoros, William Otoniel
 - Nerio Hernandez Daniel Ernesto
 
+# Página web
+
+https://sistemapos2019.github.io/Grupo_CFNM/
+
 # Planificación de pruebas del sistema
 El siguiente documento en google Drive contiene el documento del manual de pruebas: 
 https://docs.google.com/document/d/1lfVeGD2VIdSPY8jZI3x1NJ4Ymiehjk9uiqhFx8WXvUw/edit?usp=sharing
