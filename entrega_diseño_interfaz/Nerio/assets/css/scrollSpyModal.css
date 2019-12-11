@@ -1,0 +1,77 @@
+.nav-item:hover {
+  /*border-left: 1px solid #ded9d8;*/
+  /*border-right: 1px solid #ded9d8;*/
+}
+
+.navbar {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: .5rem 1rem;
+  background: #002F6C;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #fff;
+  margin-right: 30px;
+}
+
+.navbar-light .navbar-nav .nav-link:focus {
+  color: #fff;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  /*border: 0.5px solid #fff;*/
+  /*border-radius: 10.3px;*/
+  /*background: #2979FF;*/
+  color: #fff;
+}
+
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+  background-color: #01579B;
+  color: #fff;
+}
+
+a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #01579B;
+  border-color: #007bff;
+}
+
+#modalSpy {
+  height: 400px;
+  overflow: auto;
+  position: relative;
+}
+
+.ml-5, .mx-5 {
+  position: absolute;
+  right: 30px;
+}
+
+tr:hover {
+  background-color: lightyellow;
+}
+
+.col-md-6 {
+}
+

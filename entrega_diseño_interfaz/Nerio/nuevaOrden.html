@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Dashboard para llevar</title>
+    <title>Agregar Orden</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
 </head>
@@ -25,86 +25,108 @@
     </div>
     </nav>
     </div>
-<br>
+    <br>
     <div class="col-md-12 search-table-col">
-        <div class="form-group pull-right col-lg-4"><input type="text" class="search form-control" placeholder="buscar "></div><span class="counter pull-right"></span>
+    
+    <div class="col-md-12 search-table-col">
         
-       
-    <div><button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
-  Nueva Orden
+        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
+  Clik Para Orden
 </button>
         <div class="modal fade" id="exampleModal" tabindex="-1">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel" text-align: center>Inicio De sesion</h5><button type="button" class="close" data-dismiss="modal"><span>×</span></button></div>
+                        <h5 class="modal-title" id="exampleModalLabel" text-align: center>Bienvenid@ a su Nueva orden</h5><button type="button" class="close" data-dismiss="modal"><span>×</span></button></div>
                     <div class="modal-body">
-                        <h8>Ingrese su usuario y password </h8><br>
-                        <h8> asignado por favor</h8>
+                        <!-- Group of default radios - option 1 -->
+<div class="custom-control custom-radio">
+  <input type="radio" class="custom-control-input" id="defaultGroupExample1" name="groupOfDefaultRadios">
+  <label class="custom-control-label" for="defaultGroupExample1">Comer Aqui</label>
+</div>
 
-                    </div>
-                    <div class="modal-body">
-                    <input type="text" class="form-control" placeholder="usuario" />
-                    
-                    </div>
-                    <div class="modal-body"><input type="text" class="form-control" placeholder="Password" /></div>
-                    <div class="modal-footer">
+<!-- Group of default radios - option 2 -->
+<div class="custom-control custom-radio">
+  <input type="radio" class="custom-control-input" id="defaultGroupExample2" name="groupOfDefaultRadios" checked>
+  <label class="custom-control-label" for="defaultGroupExample2">Para Llevar</label>
+</div>
+
+<!-- Group of default radios - option 3 -->
+<div class="custom-control custom-radio">
+  
+</div>
+                        
+                        <select name="select" selected="">
+  <option value="value1">Mesa</option> 
+  <option value="value2">Mesa 1</option>
+  <option value="value3">Mesa 2</option>
+      <option value="value3">Mesa 3</option>
+      <option value="value3">Mesa 4</option>
+      <option value="value3">Mesa 5</option>
+</select>  
+                        
+   <br><br>
+     <input class="" type="text" placeholder="mesero "> <br><br>
+     <input class="" type="text" placeholder="cliente"><br><br>
+     <textarea class="form-control" rows="4">observaciones</textarea>
+                          
+                        
+                        
+
+                   
                        
                                    
-                        
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button><a href="nuevaOrden.html" class="btn btn-primary">iniciar</a></div>
+                        <br>
+                        <button type="button" class="btn btn-success" data-dismiss="modal">ok</button></div>
                 </div>
             </div>
         </div>
         
         
         
-        
+        <a class="btn btn-outline-primary">Platillos</a>
+    <a class="btn btn-outline-primary">Bebidas</a>
+    <a class="btn btn-outline-primary">Postres</a>
+        <div class="form-group pull-right col-lg-4"><input type="text" class="search form-control" placeholder="buscar descripcion.."></div><span class="counter pull-right"></span>
         <div class="table-responsive table-bordered table table-hover table-bordered results">
             <table class="table table-bordered table-hover">
                 <thead class="bill-header cs">
                     <tr>
-                        <th id="trs-hd"  >IdOrden</th>
-                        <th id="trs-hd"  >Mesero</th>
-                        <th id="trs-hd" >CLiente</th>
-                        <th id="trs-hd"  >Total</th>
-                        <th id="trs-hd"  >Estado</th>
-                        <th id="trs-hd"  >TiempoPreparado</th>
-                        <th id="trs-hd" >Preparado</th>
-                        <th id="trs-hd" >acciones</th>
+                        <th id="trs-hd" >IdOrden</th>
+                        <th id="trs-hd" >IdMesa</th>
+                        <th id="trs-hd" >Descripcion</th>
+                        <th id="trs-hd" >Llevar</th>
+                        <th id="trs-hd" >agregar</th>
+                        <th id="trs-hd" >cantidad</th>
+                        <th id="trs-hd" >precio Unitario</th>
+                         <th id="trs-hd" >total</th>
                     </tr>
                 </thead>
                 <tbody>
+                    <tr class="warning no-result">
                     
-                    
+                    </tr>
                     <tr>
-                        <td>03</td>
-                        <td>pacun</td>
-                        <td>holliwood</td>
-                        <td>$3.50</td>
-                        <td>Activo</td>
-                        <td><button class="btn btn-outline-success" style="  margin-left: 5px;
-" type="submit"><i style="  font-size: 15px;
-">30 min</i></button></td>
-                        <td>Si</td>
-                        <td><button class="btn btn-outline-success" style="margin-left: 5px;" type="submit"><i class="fa fa-money" style="font-size: 15px;"></i></button><button class="btn btn-outline-success" style="margin-left: 5px;" type="submit"><i class="fa fa-print" style="font-size: 15px;"></i></button>
-                            <button class="btn btn-outline-danger" style="margin-left: 5px;" type="submit"><i class="fa fa-undo" style="font-size: 15px;">
-                                </i></button>
-                            <button class="btn btn-outline-danger" style="margin-left: 5px;" type="submit"><i class="fa fa-plus" style="font-size: 15px;">
-                                </i></button>
-                            
-                            
+                        <td>01</td>
+                        <td>05</td>
+                        <td>Pupusas</td>
+                        <td>No</td>
+                        <td><button class="btn btn-outline-success" style="margin-left: 5px;" type="submit"><i class="fa fa-plus-square" style="font-size: 15px;"></i></button>
+                        <button class="btn btn-outline-danger" style="margin-left: 5px;" type="submit"><i class="fa fa-minus-square" style="font-size: 15px;"></i></button> 
                         </td>
+                        
+                        <td>1</td>
+                        <td>$1.00</td>
+                        <td>$1.00</td>
                     </tr>
                 </tbody>
             </table>
-        </div>
-    </div>
+        </div><button class="btn btn-outline-primary" type="button">agregar orden</button>
+<button type="button" class="btn btn-outline-danger" onclick="location.href='dashboard.html'">cancelar orden </button>
+</div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/script.min.js"></script>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
